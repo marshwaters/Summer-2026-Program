@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iron Endurance — May–October 2025 v5</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=Mulish:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0c0e11;--s1:#141720;--s2:#1b1f2a;--s3:#222836;
+  --bd:#2a3040;--tx:#c8d0de;--td:#7a8499;--tf:#3c4558;--wh:#e8edf4;
+  --fire:#e05520;--gold:#c49828;--grn:#2e9660;--blu:#2878b8;--red:#b83030;--yel:#c8a000;--purp:#8855cc;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--tx);font-family:'Mulish',sans-serif;font-weight:300;line-height:1.7;}
+nav{position:sticky;top:0;z-index:500;background:rgba(12,14,17,0.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--bd);display:flex;align-items:stretch;padding:0 24px;overflow-x:auto;scrollbar-width:none;}
+nav::-webkit-scrollbar{display:none;}
+.nbrand{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:1rem;letter-spacing:0.2em;color:var(--fire);display:flex;align-items:center;padding-right:20px;margin-right:6px;border-right:1px solid var(--bd);white-space:nowrap;}
+.nb{background:none;border:none;color:var(--td);font-family:'JetBrains Mono',monospace;font-size:0.62rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;padding:15px 12px;cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;transition:color .15s,border-color .15s;}
+.nb:hover{color:var(--wh);}.nb.on{color:var(--fire);border-bottom-color:var(--fire);}
+.hero{max-width:1100px;margin:0 auto;padding:68px 36px 48px;border-bottom:1px solid var(--bd);}
+.hero-eye{font-family:'JetBrains Mono',monospace;font-size:0.62rem;letter-spacing:0.24em;text-transform:uppercase;color:var(--fire);margin-bottom:12px;}
+.hero h1{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(3rem,10vw,6.5rem);line-height:0.87;color:var(--wh);margin-bottom:18px;}
+.hero h1 em{color:var(--fire);font-style:normal;}
+.hero-desc{font-size:0.9rem;color:var(--td);max-width:660px;line-height:1.82;margin-bottom:32px;}
+.statbar{display:flex;flex-wrap:wrap;gap:1px;background:var(--bd);border:1px solid var(--bd);max-width:820px;}
+.sc{background:var(--s1);padding:13px 18px;flex:1;min-width:86px;}
+.sc-l{font-family:'JetBrains Mono',monospace;font-size:0.52rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--tf);margin-bottom:3px;}
+.sc-v{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.5rem;color:var(--gold);}
+.sec{display:none;max-width:1100px;margin:0 auto;padding:50px 36px;}
+.sec.on{display:block;}
+.sh{display:flex;align-items:baseline;gap:14px;border-bottom:1px solid var(--bd);padding-bottom:12px;margin-bottom:24px;}
+.sh h2{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.9rem;letter-spacing:0.04em;color:var(--wh);}
+.sh-tag{font-family:'JetBrains Mono',monospace;font-size:0.58rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--fire);}
+.phases{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:2px;background:var(--bd);margin-bottom:26px;}
+.ph{background:var(--s1);padding:15px 14px;cursor:pointer;transition:background .15s;border-left:3px solid transparent;}
+.ph:hover{background:var(--s2);}.ph.ap{background:var(--s2);border-left-color:var(--fire);}
+.ph-n{font-family:'JetBrains Mono',monospace;font-size:0.52rem;letter-spacing:0.14em;color:var(--tf);margin-bottom:3px;}
+.ph-t{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.04rem;letter-spacing:0.04em;color:var(--wh);margin-bottom:1px;}
+.ph-d{font-family:'JetBrains Mono',monospace;font-size:0.57rem;color:var(--fire);margin-bottom:5px;}
+.ph-i{font-size:0.74rem;color:var(--td);line-height:1.55;}
+.al{padding:14px 20px;margin-bottom:13px;font-size:0.84rem;line-height:1.78;color:var(--tx);border-left:3px solid;}
+.al h4{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1rem;letter-spacing:0.04em;margin-bottom:7px;}
+.al ul{list-style:none;}.al ul li{padding:2px 0;}.al ul li::before{content:"→ ";color:var(--fire);}
+.al-fire{background:rgba(224,85,32,0.08);border-color:var(--fire);}
+.al-gold{background:rgba(196,152,40,0.08);border-color:var(--gold);}
+.al-grn{background:rgba(46,150,96,0.08);border-color:var(--grn);}
+.al-blu{background:rgba(40,120,184,0.08);border-color:var(--blu);}
+.al-red{background:rgba(184,48,48,0.08);border-color:var(--red);}
+.al-purp{background:rgba(136,85,204,0.08);border-color:var(--purp);}
+.pbrow{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;}
+.pb{background:var(--s2);border:1px solid var(--bd);color:var(--td);font-family:'JetBrains Mono',monospace;font-size:0.62rem;padding:7px 13px;cursor:pointer;letter-spacing:0.08em;transition:all .15s;}
+.pb:hover{border-color:var(--fire);color:var(--wh);}.pb.on{background:var(--fire);border-color:var(--fire);color:#fff;}
+.pd{display:none;}.pd.on{display:block;}
+.wtabs{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:16px;}
+.wt{background:var(--s3);border:1px solid var(--bd);color:var(--td);font-family:'JetBrains Mono',monospace;font-size:0.58rem;padding:6px 12px;cursor:pointer;letter-spacing:0.07em;transition:all .15s;}
+.wt:hover{border-color:var(--gold);color:var(--wh);}.wt.on{background:var(--gold);border-color:var(--gold);color:#0c0e11;}
+.wd{display:none;}.wd.on{display:block;}
+.pi{background:var(--s2);border-left:3px solid var(--gold);padding:13px 18px;margin-bottom:18px;font-size:0.84rem;color:var(--td);line-height:1.78;}
+.pi strong{color:var(--wh);}
+.wk-banner{background:var(--s3);border:1px solid var(--bd);border-left:4px solid var(--fire);padding:10px 16px;margin-bottom:14px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;}
+.wk-title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.15rem;letter-spacing:0.06em;color:var(--wh);}
+.wk-note{font-family:'JetBrains Mono',monospace;font-size:0.57rem;color:var(--td);text-transform:uppercase;}
+.wk-loads{font-family:'JetBrains Mono',monospace;font-size:0.62rem;color:var(--fire);margin-left:auto;text-align:right;line-height:1.7;}
+.daygrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(285px,1fr));gap:12px;margin-bottom:24px;}
+.dc{background:var(--s1);border:1px solid var(--bd);}
+.dch{padding:11px 18px;border-bottom:1px solid var(--bd);display:flex;justify-content:space-between;align-items:center;gap:8px;}
+.dcn{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.02rem;letter-spacing:0.06em;color:var(--wh);}
+.badge{font-family:'JetBrains Mono',monospace;font-size:0.52rem;letter-spacing:0.1em;text-transform:uppercase;padding:3px 8px;white-space:nowrap;}
+.b-lift{background:rgba(224,85,32,0.14);color:var(--fire);}
+.b-oly{background:rgba(196,152,40,0.14);color:var(--gold);}
+.b-cardio{background:rgba(46,150,96,0.14);color:var(--grn);}
+.b-shift{background:rgba(200,160,0,0.18);color:var(--yel);}
+.b-sprint{background:rgba(184,48,48,0.14);color:var(--red);}
+.b-golf{background:rgba(40,120,184,0.14);color:var(--blu);}
+.b-beach{background:rgba(136,85,204,0.14);color:var(--purp);}
+.b-bench{background:rgba(224,85,32,0.22);color:#ff8855;}
+.dcb{padding:14px 18px;}
+.xt{width:100%;border-collapse:collapse;font-size:0.79rem;}
+.xt th{font-family:'JetBrains Mono',monospace;font-size:0.52rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--tf);text-align:left;padding:0 6px 7px 0;border-bottom:1px solid var(--bd);}
+.xt td{padding:6px 6px 6px 0;border-bottom:1px solid rgba(42,48,64,0.5);vertical-align:top;}
+.xt tr:last-child td{border-bottom:none;}
+.xn{color:var(--tx);}.xl{font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:var(--fire) !important;}
+.xnote{font-size:0.71rem;color:var(--td);font-style:italic;}
+.dnote{font-size:0.73rem;color:var(--tf);font-style:italic;margin-top:9px;padding-top:9px;border-top:1px solid var(--bd);line-height:1.65;}
+.prog-box{background:var(--s2);border:1px solid var(--bd);padding:14px 18px;margin-bottom:18px;}
+.prog-box h5{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:0.95rem;letter-spacing:0.05em;color:var(--gold);margin-bottom:10px;}
+.prog-table{width:100%;border-collapse:collapse;font-size:0.78rem;}
+.prog-table th{font-family:'JetBrains Mono',monospace;font-size:0.52rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--tf);text-align:left;padding:5px 8px 5px 0;border-bottom:1px solid var(--bd);}
+.prog-table td{padding:5px 8px 5px 0;border-bottom:1px solid rgba(42,48,64,0.4);color:var(--td);}
+.prog-table tr:last-child td{border-bottom:none;}
+.pw{font-family:'JetBrains Mono',monospace;color:var(--gold);font-size:0.71rem;}
+.pv{font-family:'JetBrains Mono',monospace;color:var(--fire);font-size:0.71rem;}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:13px;margin-bottom:28px;}
+.card{background:var(--s1);border:1px solid var(--bd);padding:22px;}
+.card-tag{font-family:'JetBrains Mono',monospace;font-size:0.55rem;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:8px;}
+.card h3{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.25rem;letter-spacing:0.04em;color:var(--wh);margin-bottom:7px;}
+.card p{font-size:0.83rem;color:var(--td);line-height:1.75;}
+.t-fire{color:var(--fire);}.t-gold{color:var(--gold);}.t-grn{color:var(--grn);}.t-blu{color:var(--blu);}.t-wh{color:var(--wh);}.t-purp{color:var(--purp);}
+.dt{width:100%;border-collapse:collapse;margin-bottom:22px;}
+.dt th{font-family:'JetBrains Mono',monospace;font-size:0.57rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--tf);text-align:left;padding:9px 12px;border-bottom:2px solid var(--bd);background:var(--s2);}
+.dt td{padding:9px 12px;border-bottom:1px solid var(--bd);font-size:0.83rem;color:var(--td);}
+.dt tr:nth-child(even) td{background:rgba(20,23,32,0.45);}
+.dt-n{color:var(--wh) !important;}.dt-v{font-family:'JetBrains Mono',monospace;color:var(--gold) !important;}
+.lg{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:13px;}
+.lc{background:var(--s1);border:1px solid var(--bd);padding:20px;}
+.lc h3{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:1.1rem;letter-spacing:0.05em;margin-bottom:11px;}
+.lc ul{list-style:none;font-size:0.81rem;color:var(--td);line-height:1.9;}
+.lc ul li::before{content:"· ";color:var(--fire);font-weight:bold;}
+.bcbar{background:var(--s1);border:1px solid var(--bd);padding:16px 20px;margin-bottom:11px;}
+.bcl{font-family:'JetBrains Mono',monospace;font-size:0.57rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--tf);margin-bottom:5px;}
+.bct{height:8px;background:var(--s3);border-radius:2px;overflow:hidden;margin-bottom:5px;}
+.bcf{height:100%;border-radius:2px;}
+.bcn{font-size:0.77rem;color:var(--td);}
+.change-tag{display:inline-block;font-family:'JetBrains Mono',monospace;font-size:0.54rem;letter-spacing:0.1em;text-transform:uppercase;padding:2px 7px;background:rgba(196,152,40,0.15);color:var(--gold);border:1px solid rgba(196,152,40,0.3);margin-left:8px;}
+@media(max-width:620px){.hero{padding:48px 18px 34px;}.sec{padding:36px 18px;}.phases{grid-template-columns:1fr 1fr;}nav{padding:0 10px;}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nbrand">Iron Endurance</div>
+  <button class="nb on" onclick="S('overview',this)">Overview</button>
+  <button class="nb" onclick="S('workouts',this)">Workouts</button>
+  <button class="nb" onclick="S('loads',this)">Loads & %</button>
+  <button class="nb" onclick="S('spine',this)">Back Protocol</button>
+  <button class="nb" onclick="S('cardio',this)">Cardio & Sprints</button>
+  <button class="nb" onclick="S('nutrition',this)">Nutrition</button>
+</nav>
+<div class="hero">
+  <div class="hero-eye">Custom Program · May–October 2025 · 26 yrs · Every Week Written · Full Progressions</div>
+  <h1>IRON<br><em>ENDURANCE</em></h1>
+  <p class="hero-desc">Every week is written individually. Every percentage and RPE is listed. What changes each week is highlighted so you can find it instantly without re-reading the whole session. Firefighter. Olympic lifter. Powerlifter. Golfer. 26 yrs. Physio 1–2×/wk.</p>
+  <div class="statbar">
+    <div class="sc"><div class="sc-l">Snatch</div><div class="sc-v">215</div></div>
+    <div class="sc"><div class="sc-l">C&amp;J</div><div class="sc-v">285</div></div>
+    <div class="sc"><div class="sc-l">Squat</div><div class="sc-v">415</div></div>
+    <div class="sc"><div class="sc-l">Bench</div><div class="sc-v">320→+</div></div>
+    <div class="sc"><div class="sc-l">Deadlift</div><div class="sc-v">435</div></div>
+    <div class="sc"><div class="sc-l">Body Fat</div><div class="sc-v">~16%</div></div>
+    <div class="sc"><div class="sc-l">BF Target</div><div class="sc-v">13%</div></div>
+    <div class="sc"><div class="sc-l">Age</div><div class="sc-v">26</div></div>
+  </div>
+</div>
+
+<!-- OVERVIEW -->
+<div id="overview" class="sec on">
+  <div class="sh"><h2>Program Architecture</h2><span class="sh-tag">5 Blocks · 26 Weeks · May–October</span></div>
+  <div class="phases">
+    <div class="ph ap" onclick="gP('p1')"><div class="ph-n">Block 01</div><div class="ph-t">Deload + Recomp</div><div class="ph-d">May · Wks 1–2</div><div class="ph-i">CNS reset. Full Oly 58–65%. Deficit starts. Beach muscle intro.</div></div>
+    <div class="ph" onclick="gP('p2')"><div class="ph-n">Block 02</div><div class="ph-t">Build + Early Golf</div><div class="ph-d">May Wk3–June · 6 wks</div><div class="ph-i">4 sessions/wk. Oly singles + back-offs. Bench focus. Golf 3–4×/wk.</div></div>
+    <div class="ph" onclick="gP('p3')"><div class="ph-n">Block 03</div><div class="ph-t">Peak Golf · Maintain</div><div class="ph-d">July–August · 9 wks</div><div class="ph-i">Golf 5×/wk. 3 gym sessions. Full Oly stays. Bench every week.</div></div>
+    <div class="ph" onclick="gP('p4')"><div class="ph-n">Block 04</div><div class="ph-t">Wind-Down + Push</div><div class="ph-d">September · 4 wks</div><div class="ph-i">Golf 4×/wk. 4 gym sessions. Oly loads climb. Bench near-max.</div></div>
+    <div class="ph" onclick="gP('p5')"><div class="ph-n">Block 05</div><div class="ph-t">Strength Rebuild</div><div class="ph-d">October · 4 wks</div><div class="ph-i">Golf ends. 5 sessions/wk. Conv. DL returns. Max prep November.</div></div>
+  </div>
+  <div class="al al-purp">
+    <h4>How to Read This Program</h4>
+    <ul>
+      <li>Select a block → select a week tab. Every week has its own complete sessions written out.</li>
+      <li>When 2–3 consecutive weeks share the same percentages, one set of sessions is shown. The next week's tab shows only a <span class="change-tag">↑ CHANGE</span> table listing exactly what increases — you don't re-read the full session.</li>
+      <li>Oly lifts show both a % target and an RPE. Build to the % as a guide; use RPE 8–8.5 as your stop point. If you hit RPE 8.5 before the target %, take that lift — don't chase the number.</li>
+      <li>Station workout (on shift) and golf day order of operations are written in full in Block 1, Week 1. They are identical every block — reference Block 1 whenever needed.</li>
+    </ul>
+  </div>
+  <div class="al al-fire">
+    <h4>Oly Lifting — The Real Rules</h4>
+    <ul>
+      <li>Full squat snatch and squat clean from day one. Your back hurts from golf rotation, not lifting. Winter training confirms this.</li>
+      <li>Every Oly session: build systematically to a heavy single at the listed RPE, then hit back-off sets at the listed %. Back-offs drop from 3 sets to 2 during peak golf (Block 3) and return to 3 in Block 4.</li>
+      <li>If SIJ is irritated that specific week: hang positions only for that week. Short-term adjustment, not a permanent rule.</li>
+      <li>Physio 1–2×/wk is a significant asset. Tell them what you lifted and what you felt. Their real-time feedback beats any percentage table.</li>
+    </ul>
+  </div>
+  <div class="al al-gold">
+    <h4>Bench Arc — 320 → 335–345 by November</h4>
+    <ul>
+      <li>2 bench exposures every week in every block without exception — one heavy/intensity day, one volume/accessory day.</li>
+      <li>Key drivers: floor press (raw strength), Spoto press (bottom strength), weighted dips (lockout), close-grip bench (tricep). All listed with specific % each week.</li>
+      <li>Bench does NOT reduce during golf season. Zero SIJ demand. This is where you keep improving all summer.</li>
+    </ul>
+  </div>
+  <div class="al al-grn">
+    <h4>Shift Logic</h4>
+    <ul>
+      <li>Shift day: station workout — upper + core + 20 min Zone 2. McGill Big 3 always first.</li>
+      <li>Day after shift: Zone 2 only or full rest. No heavy iron within 16 hrs of shift end.</li>
+      <li>2 days after shift: best heavy session. Schedule Oly and squat work here.</li>
+      <li>Week-off rotation block: push 5 sessions. That is your highest volume week — use it.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- WORKOUTS -->
+<div id="workouts" class="sec">
+  <div class="sh"><h2>Weekly Workouts</h2><span class="sh-tag">Every Week Written · Select Block → Week Tab</span></div>
+  <div class="pbrow">
+    <button class="pb on" onclick="sP('p1',this)">Blk 1 — Deload (2 wks)</button>
+    <button class="pb" onclick="sP('p2',this)">Blk 2 — Build (6 wks)</button>
+    <button class="pb" onclick="sP('p3',this)">Blk 3 — Peak Golf (9 wks)</button>
+    <button class="pb" onclick="sP('p4',this)">Blk 4 — Wind-Down (4 wks)</button>
+    <button class="pb" onclick="sP('p5',this)">Blk 5 — Rebuild (4 wks)</button>
+  </div>
+
+<!-- ██ BLOCK 1 ██ -->
+<div id="p1" class="pd on">
+<div class="pi"><strong>Block 1 — Deload & Recomp Launch · May Weeks 1–2</strong><br>
+You just maxed out. CNS needs 10–14 days sub-65%. Loads are low because of the maxout — not your back. Start caloric deficit now. Lock in McGill Big 3 as a daily habit. 2 lift sessions/wk + station on shift + 3 standalone cardio sessions. Golf starts 3×/wk mid-May.</div>
+<div class="wtabs">
+  <button class="wt on" onclick="sW('p1','w1',this)">Week 1</button>
+  <button class="wt" onclick="sW('p1','w2',this)">Week 2</button>
+</div>
+
+<div id="p1-w1" class="wd on">
+<div class="wk-banner">
+  <div class="wk-title">Week 1 — True Deload</div>
+  <div class="wk-note">Sessions under 50 min · Nothing close to failure</div>
+  <div class="wk-loads">Snatch 58% (125) · C&amp;J 60% (171) · Squat 55% (228) · Bench 62% (198) · TBD 50% (228)</div>
+</div>
+<div class="daygrid">
+<div class="dc">
+  <div class="dch"><div class="dcn">Session A — Full Oly + Lower</div><div class="badge b-oly">58–60% · RPE 5</div></div>
+  <div class="dcb">
+    <div style="font-size:0.75rem;color:var(--grn);margin-bottom:10px;font-family:'JetBrains Mono',monospace;">⚑ McGill Big 3 + Hip 90/90 mobility — BEFORE every single session, every block, all program long</div>
+    <table class="xt">
+      <tr><th>Exercise</th><th>Sets × Reps</th><th>Load</th><th>RPE</th><th>Notes</th></tr>
+      <tr><td class="xn">Snatch (full squat)</td><td>5 × 3</td><td class="xl">58% = 125 lb</td><td class="xnote">RPE 5</td><td class="xnote">Full catch. Technique focus. Perfect reps only.</td></tr>
+      <tr><td class="xn">Clean &amp; Jerk (squat clean)</td><td>5 × 2+1</td><td class="xl">60% = 171 lb</td><td class="xnote">RPE 5</td><td class="xnote">Full squat catch. Reset jerk each rep.</td></tr>
+      <tr><td class="xn">Back Squat</td><td>4 × 6</td><td class="xl">55% = 228 lb</td><td class="xnote">RPE 5</td><td class="xnote">Deliberate, controlled. Not grinding.</td></tr>
+      <tr><td class="xn">Trap Bar Deadlift</td><td>3 × 8</td><td class="xl">50% = 228 lb</td><td class="xnote">RPE 4–5</td><td class="xnote">Trap bar only through all of golf season</td></tr>
+      <tr><td class="xn">Banded Clamshell</td><td>3 × 15 ea</td><td class="xl">Band</td><td class="xnote">—</td><td class="xnote">Glute activation — every session all program</td></tr>
+      <tr><td class="xn">Pallof Press</td><td>3 × 12 ea</td><td class="xl">Band/Cable</td><td class="xnote">—</td><td class="xnote">Anti-rotation, brace before each rep</td></tr>
+      <tr><td class="xn">Bird Dog</td><td>3 × 8 ea</td><td class="xl">BW</td><td class="xnote">—</td><td class="xnote">2-second hold at full extension</td></tr>
+    </table>
+    <div class="dnote">45 min max. Trap bar DL estimated ~10% above conventional — test conservatively in Week 2.</div>
+  </div>
+</div>
+<div class="dc">
+  <div class="dch"><div class="dcn">Session B — Bench + Hypertrophy</div><div class="badge b-bench">62% Volume · RPE 6</div></div>
+  <div class="dcb">
+    <table class="xt">
+      <tr><th>Exercise</th><th>Sets × Reps</th><th>Load</th><th>RPE</th><th>Notes</th></tr>
+      <tr><td class="xn">Bench Press</td><td>4 × 8</td><td class="xl">62% = 198 lb</td><td class="xnote">RPE 6</td><td class="xnote">Volume week. Rebuild work capacity post-max.</td></tr>
+      <tr><td class="xn">Weighted Dips</td><td>3 × 10</td><td class="xl">Moderate</td><td class="xnote">RPE 6</td><td class="xnote">Chest dip, full ROM</td></tr>
+      <tr><td class="xn">DB Incline Press</td><td>3 × 12</td><td class="xl">Moderate</td><td class="xnote">RPE 6</td><td class="xnote">Full stretch at bottom</td></tr>
+      <tr><td class="xn">Cable or DB Fly</td><td>3 × 15</td><td class="xl">Light-Mod</td><td class="xnote">RPE 6</td><td class="xnote">Chest pump, squeeze at top</td></tr>
+      <tr><td class="xn">EZ Bar Curl</td><td>3 × 12</td><td class="xl">Moderate</td><td class="xnote">RPE 6</td><td class="xnote">Controlled eccentric</td></tr>
+      <tr><td class="xn">Hammer Curl</td><td>3 × 12</td><td class="xl">Moderate</td><td class="xnote">RPE 6</td><td class="xnote">Brachialis focus</td></tr>
+      <tr><td class="xn">Overhead Tricep Extension</td><td>3 × 15</td><td class="xl">Moderate</td><td class="xnote">RPE 6</td><td class="xnote">Long head priority</td></tr>
+      <tr><td class="xn">DB Lateral Raise</td><td>4 × 15</td><td class="xl">Light</td><td class="xnote">RPE 6</td><td class="xnote">Slow, controlled, no swinging</td></tr>
+      <tr><td class="xn">Face Pull</td><td>3 × 20</td><td class="xl">Band</td><td class="xnote">—</td><td class="xnote">End every session with this — always</td></tr>
+    </table>
+    <div class="dnote">Zero SIJ risk. Zero spinal loading. This is your beach muscle day.</div>
+  </div>
+</div>
+<div class="dc">
+  <div class="dch"><div class="dcn">Station Workout (On Shift)</div><div class="badge b-shift">Hall Gym · Every Shift · All Program</div></div>
+  <div class="dcb">
+    <table class="xt">
+      <tr><th>Exercise</th><th>Sets × Reps</th><th>Load</th><th>Notes</th></tr>
+      <tr><td class="xn">McGill Big 3</td><td>2 rounds</td><td class="xl">BW</td><td class="xnote">Always first</td></tr>
+      <tr><td class="xn">Pull-Up (weighted if available)</td><td>5 × 5</td><td class="xl">BW+</td><td class="xnote">Dead hang start and finish</td></tr>
+      <tr><td class="xn">Push-Up or Dip</td><td>4 × 15</td><td class="xl">BW+</td><td class="xnote">Chest volume</td></tr>
+      <tr><td class="xn">Single-Arm DB Row</td><td>4 × 10 ea</td><td class="xl">Moderate</td><td class="xnote">Brace core</td></tr>
+      <tr><td class="xn">Copenhagen Plank</td><td>3 × 20s ea</td><td class="xl">BW</td><td class="xnote">Lateral core + adductor</td></tr>
+      <tr><td class="xn">Half-Kneeling Pallof Press</td><td>3 × 12 ea</td><td class="xl">Band</td><td class="xnote">Anti-rotation</td></tr>
+      <tr><td class="xn">Assault Bike or Row Erg</td><td>20 min</td><td class="xl">Zone 2</td><td class="xnote">130–142 bpm easy</td></tr>
+    </table>
+    <div class="dnote">Station workout identical every block. No heavy lower body on shift — SCBA work already loads lumbar.</div>
+  </div>
+</div>
+<div class="dc">
+  <div class="dch"><div class="dcn">Standalone Cardio × 3/wk</div><div class="badge b-cardio">Zone 2 · 22–25 min</div></div>
+  <div class="dcb">
+    <table class="xt">
+      <tr><th>Activity</th><th>Duration</th><th>HR</th><th>Notes</th></tr>
+      <tr><td class="xn">Outdoor run</td><td>22–25 min</td><td class="xl">130–140 bpm</td><td class="xnote">Preferred. Conversational pace.</td></tr>
+      <tr><td class="xn">Outdoor bike (if SIJ sore)</td><td>30–35 min</td><td class="xl">130–140 bpm</td><td class="xnote">Zero impact alternative</td></tr>
+      <tr><td class="xn">Hip flexor stretch after</td><td>90s ea</td><td class="xl">—</td><td class="xnote">Every cardio day</td></tr>
+      <tr><td class="xn">McGill Big 3 after</td><td>6 min</td><td class="xl">—</td><td class="xnote">Build the daily habit now</td></tr>
+    </table>
+  </div>
+</div>
+<div class="dc">
+  <div class="dch"><div class="dcn">Golf Day — Order of Operations</div><div class="badge b-golf">Every Round · Every Block · All Program</div></div>
+  <div class="dcb">
+    <table class="xt">
+      <tr><th>Step</th><th>Activity</th><th>Time</th><th>Why</th></tr>
+      <tr><td class="xnote">1</td><td class="xn">90/90 Hip Stretch</td><td>2 min ea</td><td class="xnote">Passive hip opening — rotation from hip, not SI joint</td></tr>
+      <tr><td class="xnote">2</td><td class="xn">Hip CARs (standing circles)</td><td>3 circles ea</td><td class="xnote">Active joint prep, full range</td></tr>
+      <tr><td class="xnote">3</td><td class="xn">Glute Bridge × 20</td><td>1 set</td><td class="xnote">Fire SIJ stabilizers before 80 swings</td></tr>
+      <tr><td class="xnote">4</td><td class="xn">Half-Kneeling T-Spine Rotation</td><td>10 ea</td><td class="xnote">Thoracic rotates so lumbar doesn't</td></tr>
+      <tr><td class="xnote">5</td><td class="xn">Golf (walk 18 holes)</td><td>Full round</td><td class="xnote">Primary summer Zone 2 cardio</td></tr>
+      <tr><td class="xnote">6</td><td class="xn">Post-round decompression</td><td>10 min</td><td class="xnote">Back Protocol tab — mandatory every round</td></tr>
+    </table>
+    <div class="dnote">No gym on golf days. Station workout on shift days is how training frequency stays without stacking golf + gym.</div>
+  </div>
+</div>
+</div>
+</div>
+
+<div id="p1-w2" class="wd">
+<div class="wk-banner">
+  <div class="wk-title">Week 2 — Light Build <span class="change-tag">↑ CHANGE</span></div>
+  <div class="wk-note">Same structure as Week 1 · Loads +3–5% · Cardio +3 min</div>
+  <div class="wk-loads">Snatch 62% (133) · C&amp;J 64% (183) · Squat 60% (249) · Bench 65% (208) · TBD 54% (246)</div>
+</div>
+<div class="prog-box">
+  <h5>What Changes Week 2 vs Week 1</h5>
+  <table class="prog-table">
+    <tr><th>Exercise</th><th>Week 1</th><th>Week 2</th><th>Δ</th></tr>
+    <tr><td>Snatch</td><td class="pw">5×3 @ 58% (125 lb)</td><td class="pv">5×3 @ 62% (133 lb)</td><td class="xnote">+4% / +8 lb</td></tr>
+    <tr><td>Clean &amp; Jerk</td><td class="pw">5×2+1 @ 60% (171 lb)</td><td class="pv">5×2+1 @ 64% (183 lb)</td><td class="xnote">+4% / +12 lb</td></tr>
+    <tr><td>Back Squat</td><td class="pw">4×6 @ 55% (228 lb)</td><td class="pv">4×6 @ 60% (249 lb)</td><td class="xnote">+5% / +21 lb</td></tr>
+    <tr><td>Trap Bar DL</td><td class="pw">3×8 @ 50% (228 lb)</td><td class="pv">3×8 @ 54% (246 lb)</td><td class="xnote">+4% / +18 lb</td></tr>
+    <tr><td>Bench Press</td><td class="pw">4×8 @ 62% (198 lb)</td><td class="pv">4×8 @ 65% (208 lb)</td><td class="xnote">+3% / +10 lb</td></tr>
+    <tr><td>Weighted Dips</td><td class="pw">Moderate</td><td class="pv">+5–10 lb vs Week 1</td><td class="xnote">Small increase</td></tr>
+    <tr><td>Standalone cardio</td><td class="pw">22–25 min</td><td class="pv">25–28 min</td><td class="xnote">+3 min</td></tr>
+  </table>
+</div>
+<div class="al al-grn"><h4>Everything Else Identical to Week 1</h4><ul>
+  <li>All sets and reps the same</li>
+  <li>Hypertrophy accessories (Session B): add 2.5 lb to DB movements where Week 1 felt easy with 2+ reps in reserve</li>
+  <li>Station workout and golf day order of operations: unchanged</li>
+</ul></div>
+</div>
+</div>
+
+<!-- ██ BLOCK 2 ██ -->
+<div id="p2" class="pd">
+<div class="pi"><strong>Block 2 — Build + Early Golf · May Wk3 – June · 6 Weeks</strong><br>
+4 gym sessions/wk + station on shift. Full squat Oly heavy singles begin with back-offs. Bench gets both a heavy day and a volume day. Hypertrophy day stays. Golf 3→4 rounds/wk. Same % for 2 weeks, then a jump. Away trip in June = full rest.</div>
+<div class="wtabs">
+  <button class="wt on" onclick="sW('p2','w12',this)">Wks 1–2</button>
+  <button class="wt" onclick="sW('p2','w34',this)">Wks 3–4</button>
+  <button class="wt" onclick="sW('p2','w56',this)">Wks 5–6</button>
+</div>
+
+<div id="p2-w12" class="wd on">
+<div class="wk-banner">
+  <div class="wk-title">Weeks 1–2 (May Wk3–4) — First Build</div>
+  <div class="wk-note">Run both weeks at these exact numbers</div>
+  <div class="wk-loads">Snatch ~83% feel → 3×2 @ 74% (159) · C&amp;J ~83% feel → 3×2 @ 74% (211) · Squat 5×5 @ 70% (291) · Bench ~83% feel → 4×3 @ 76% (243) · TBD 4×5 @ 68% (309)</div>
+</div>
+<div class="al al-blu" style="margin-bottom:14px;"><h4>Block 2 Weekly Structure</h4><ul>
+  <li><strong>Session A (2 days post-shift):</strong> Snatch + Squat — heaviest session of the week</li>
+  <li><strong>Session B (next off day):</strong> Bench heavy + floor press + upper accessories</li>
+  <li><strong>Shift day:</strong> Station workout — upper + core + Zone 2</li>
+  <li><strong>Session C (2 days post-shift or off day):</strong> C&amp;J + Trap Bar DL + Pull</li>
+  <li><strong>Session D (off day):</strong> Hypertrophy + Arms + Beach</li>
+  <li><strong>Cardio 2×/wk:</strong> 28–35 min Zone 2 run or bike, post-shift or lighter off days</li>
+  <li><strong>Golf 3–4×/wk:</strong> Pre-round warmup every time. No gym same day as golf.</li>
+</ul></div>
+<div class="daygrid">
+<div class="dc">
+  <div class="dch"><div class="dcn">Session A — Snatch + Squat</div><div class="badge b-oly">Single ~83% feel / RPE 8 → 3×2 @ 74%</div></div>
+  <div class="dcb">
+    <table class="xt">
+      <tr><th>Exercise</th><th>Sets × Reps</th><th>Load</th><th>RPE</th><th>Notes</th></tr>
+      <tr><td class="xn">Snatch — build to heavy single</td><td>Warm-up + 1 single</td><td class="xl">~83% feel ≈ 178 lb</td><td class="xnote">RPE 8 — stop here</td><td class="xnote">Build in 10–15 lb jumps. Stop when bar slows or RPE 8. Leave 1 rep in tank.</td></tr>
+      <tr><td class="xn">Snatch — back-off sets</td><td>3 × 2</td><td class="xl">74% = 159 lb</td><td class="xnote">RPE 7</td><td class="xnote">Should feel smooth and fast after the heavy single</td></tr>
+      <tr><td class="xn">Snatch Pull</td><td>4 × 4</td><td class="xl">90% of single ≈ 160 lb</td><td class="xnote">RPE 7</td><td class="xnote">Lat tension, aggressive extension</td></tr>
+      <tr><td class="xn">Back Squat</td><td>5 × 5</td><td class="xl">70% = 291 lb</td><td class="xnote">RPE 7</td><td class="xnote">Volume day — bar moves with speed</td></tr>
+      <tr><td class="xn">Front Squat (pause 2s)</td><td>3 × 4</td><td class="xl">63% = 214 lb</td><td class="xnote">RPE 6</td><td class="xnote">Jerk receiving position strength</td></tr>
+      <tr><td class="xn">Suitcase Carry 30m</td><td>4 rounds</td><td class="xl">Heavy</td><td class="xnote">—</td><td class="xnote">Lateral stabilizer — golf and DL specific. Every session.</td></tr>
+      <tr><td class="xn">Bird Dog</td><td>3 × 8 ea</td><td class="xl">BW</td><td class="xnote">—</td><td class="xnote">Always</td></tr>
+    </table>
+    <div class="dnote">Heavy single + back-off matches your old program. The single builds top-end neural strength. Back-offs build volume under load.</div>
+  </div>
+</div>
+<div class="dc">
+  <div class="dch"><div class="dcn">Session B — Bench Heavy + Upper</div><div class="badge b-bench">Single ~83% feel / RPE 8 → 4×3 @ 76%</div></div>
+  <div class="dcb">
+    <table class="xt">
+      <tr><th>Exercise</th><th>Sets × Reps</th><th>Load</th><th>RPE</th><th>Notes</th></tr>
+      <tr><td class="xn">Bench — build to heavy set</td><td>Warm-up + 1 heavy set</td><td class="xl">~83% feel ≈ 266 lb</td><td class="xnote">RPE 8 — 1–2 reps left</td><td class="xnote">Not a max. Stop at RPE 8. Drives the adaptation.</td></tr>
+      <tr><td class="xn">Bench — back-off sets</td><td>4 × 3</td><td class="xl">76% = 243 lb</td><td class="xnote">RPE 7</td><td class="xnote">Should feel strong and fast</td></tr>
+      <tr><td class="xn">Floor Press</td><td>4 × 5</td><td class="xl">70% = 224 lb</td><td class="xnote">RPE 7</td><td class="xnote">No leg drive — forces chest and triceps only</td></tr>
+      <tr><td class="xn">OHP (strict)</td><td>4 × 6</td><td class="xl">67% = 131 lb</td><td class="xnote">RPE 7</td><td class="xnote">No leg drive</td></tr>
+      <tr><td class="xn">Weighted Pull-Up</td><td>4 × 5</td><td class="xl">Moderate</td><td class="xnote">RPE 7</td><td class="xnote">Back thickness supports bench arch</td></tr>
+      <tr><td class="xn">Close-Grip Bench</td><td>3 × 8</td><td class="xl">66% = 211 lb</td><td class="xnote">RPE 7</td><td class="xnote">Tricep strength = lockout strength</td></tr>
+      <tr><td class="xn">Tricep Rope Pushdown</td><td>4 × 15</td><td class="xl">Moderate</td><td class="xnote">RPE 7</td><td class="xnote">Lockout volume</td></tr>
+    </table>
+    <div class="dnote">Floor press every week. Best single accessory for raw pressers — removes the leg drive habit entirely.</div>
+  </div>
+</div>
+<div class="dc">
+  <div class="dch"><div class="dcn">Session C — C&amp;J + DL + Pull</div><div class="badge b-oly">Single ~83% feel / RPE 8 → 3×2 @ 74%</div></div>
+  <div class="dcb">
+    <table class="xt">
+      <tr><th>Exercise</th><th>Sets × Reps</th><th>Load</th><th>RPE</th><th>Notes</th></tr>
+      <tr><td class="xn">Clean &amp; Jerk — build to heavy single</td><td>Warm-up + 1 single</td><td class="xl">~83% feel ≈ 237 lb</td><td class="xnote">RPE 8</td><td class="xnote">Full squat clean, full jerk. Build systematically.</td></tr>
+      <tr><td class="xn">C&amp;J — back-off sets</td><td>3 × 2</td><td class="xl">74% = 211 lb</td><td class="xnote">RPE 7</td><td class="xnote">Full movement, smooth</td></tr>
+      <tr><td class="xn">Clean Pull</td><td>4 × 4</td><td class="xl">90% of single ≈ 213 lb</td><td class="xnote">RPE 7</td><td class="xnote">Triple extension, fast elbows</td></tr>
+      <tr><td class="xn">Trap Bar Deadlift</td><td>4 × 5</td><td class="xl">68% = 309 lb</td><td class="xnote">RPE 7</td><td class="xnote">Trap bar only through golf season</td></tr>
+      <tr><td class="xn">Barbell Row (3-sec lower)</td><td>4 × 8</td><td class="xl">63% = 274 lb</td><td class="xnote">RPE 7</td><td class="xnote">Horizontal pull volume</td></tr>
+      <tr><td class="xn">Lat Pulldown</td><td>3 × 12</td><td class="xl">Moderate</td><td class="xnote">RPE 7</td><td class="xnote">Lat width</td></tr>
+      <tr><td class="xn">Pallof Press</td><td>3 × 12 ea</td><td class="xl">Cable</td><td class="xnote">—</td><td class="xnote">Anti-rotation, always</td></tr>
+    </table>
+  </div>
+</div>
+<div class="dc">
+  <div class="dch"><div class="dcn">Session D — Hypertrophy + Beach</div><div class="badge b-beach">Muscle Building · RPE 7–8</div></div>
+  <div class="dcb">
+    <table class="xt">
+      <tr><th>Exercise</th><th>Sets × Reps</th><th>Load</th><th>RPE</th><th>Notes</th></tr>
+      <tr><td class="xn">Incline DB Press</td><td>4 × 12</td><td class="xl">Moderate-Heavy</td><td class="xnote">RPE 8</td><td class="xnote">Upper chest priority</td></tr>
+      <tr><td class="xn">Cable Fly</td><td>3 × 15</td><td class="xl">Light-Mod</td><td class="xnote">RPE 7</td><td class="xnote">Squeeze at peak contraction</td></tr>
+      <tr><td class="xn">DB Lateral Raise</td><td>4 × 15</td><td class="xl">Light</td><td class="xnote">RPE 7</td><td class="xnote">Slow, controlled, no cheat</td></tr>
+      <tr><td class="xn">Rear Delt Fly (cable)</td><td>3 × 20</td><td class="xl">Light</td><td class="xnote">RPE 6</td><td class="xnote">External rotation strength</td></tr>
+      <tr><td class="xn">EZ Bar Curl</td><td>4 × 10</td><td class="xl">Moderate</td><td class="xnote">RPE 8</td><td class="xnote">Bicep mass</td></tr>
+      <tr><td class="xn">Incline DB Curl</td><td>3 × 12</td><td class="xl">Light-Mod</td><td class="xnote">RPE 7</td><td class="xnote">Full stretch at bottom</td></tr>
+      <tr><td class="xn">Skull Crusher</td><td>4 × 10</td><td class="xl">Moderate</td><td class="xnote">RPE 8</td><td class="xnote">Elbow stays fixed throughout</td></tr>
+      <tr><td class="xn">Cable Tricep Pushdown</td><td>3 × 15</td><td class="xl">Moderate</td><td class="xnote">RPE 8</td><td class="xnote">Burnout</td></tr>
+      <tr><td class="xn">Face Pull</td><td>4 × 20</td><td class="xl">Band</td><td class="xnote">—</td><td class="xnote">Always finish every session with this</td></tr>
+    </table>
+    <div class="dnote">Zero SIJ risk. Zero spinal loading. Can go adjacent to golf day. Push this hard.</div>
+  </div>
+</div>
+<div class="dc">
+  <div class="dch"><div class="dcn">Standalone Cardio × 2/wk</div><div class="badge b-cardio">Zone 2 · 28–32 min</div></div>
+  <div class="dcb">
+    <table class="xt">
+      <tr><th>Activity</th><th>Duration</th><th>HR</th><th>Notes</th></tr>
+      <tr><td class="xn">Outdoor run</td><td>28–32 min</td><td class="xl">132–145 bpm</td><td class="xnote">Post-shift days ideal</td></tr>
+      <tr><td class="xn">Outdoor bike (SIJ sore)</td><td>38–45 min</td><td class="xl">132–145 bpm</td><td class="xnote">Zero impact alternative</td></tr>
+    </table>
+    <div class="dnote">Golf walking on 3–4 golf days is your other Zone 2 volume. Don't add more cardio on golf days.</div>
+  </div>
+</div>
+</div>
+</div>
+
+<div id="p2-w34" class="wd">
+<div class="wk-banner">
+  <div class="wk-title">Weeks 3–4 (June Wk1–2) — Load Jump <span class="change-tag">↑ CHANGE</span></div>
+  <div class="wk-note">Run both weeks at these numbers · Golf now 4 rounds/wk</div>
+  <div class="wk-loads">Snatch ~85% feel → 3×2 @ 76% (163) · C&amp;J ~85% feel → 3×2 @ 76% (217) · Squat 5×5 @ 73% (303) · Bench ~85% feel → 4×3 @ 78% (250) · TBD 4×5 @ 70% (319)</div>
+</div>
+<div class="prog-box">
+  <h5>What Changes Weeks 3–4 vs Weeks 1–2</h5>
+  <table class="prog-table">
+    <tr><th>Exercise</th><th>Wks 1–2</th><th>Wks 3–4</th><th>Δ</th></tr>
+    <tr><td>Snatch heavy single target</td><td class="pw">~83% feel ≈ 178 lb / RPE 8</td><td class="pv">~85% feel ≈ 183 lb / RPE 8</td><td class="xnote">+2% feel / +5 lb</td></tr>
+    <tr><td>Snatch back-offs (3×2)</td><td class="pw">74% = 159 lb</td><td class="pv">76% = 163 lb</td><td class="xnote">+2% / +4 lb</td></tr>
+    <tr><td>Snatch Pull</td><td class="pw">90% of single ≈ 160 lb</td><td class="pv">90% of new single ≈ 165 lb</td><td class="xnote">+5 lb</td></tr>
+    <tr><td>C&amp;J heavy single target</td><td class="pw">~83% feel ≈ 237 lb / RPE 8</td><td class="pv">~85% feel ≈ 242 lb / RPE 8</td><td class="xnote">+2% feel / +5 lb</td></tr>
+    <tr><td>C&amp;J back-offs (3×2)</td><td class="pw">74% = 211 lb</td><td class="pv">76% = 217 lb</td><td class="xnote">+2% / +6 lb</td></tr>
+    <tr><td>Back Squat</td><td class="pw">5×5 @ 70% (291 lb)</td><td class="pv">5×5 @ 73% (303 lb)</td><td class="xnote">+3% / +12 lb</td></tr>
+    <tr><td>Front Squat (pause)</td><td class="pw">3×4 @ 63% (214 lb)</td><td class="pv">3×4 @ 65% (221 lb)</td><td class="xnote">+2% / +7 lb</td></tr>
+    <tr><td>Trap Bar DL</td><td class="pw">4×5 @ 68% (309 lb)</td><td class="pv">4×5 @ 70% (319 lb)</td><td class="xnote">+2% / +10 lb</td></tr>
+    <tr><td>Bench heavy single target</td><td class="pw">~83% feel ≈ 266 lb / RPE 8</td><td class="pv">~85% feel ≈ 272 lb / RPE 8</td><td class="xnote">+2% feel / +6 lb</td></tr>
+    <tr><td>Bench back-offs (4×3)</td><td class="pw">76% = 243 lb</td><td class="pv">78% = 250 lb</td><td class="xnote">+2% / +7 lb</td></tr>
+    <tr><td>Floor Press</td><td class="pw">4×5 @ 70% (224 lb)</td><td class="pv">4×5 @ 72% (230 lb)</td><td class="xnote">+2% / +6 lb</td></tr>
+    <tr><td>OHP</td><td class="pw">4×6 @ 67% (131 lb)</td><td class="pv">4×6 @ 69% (135 lb)</td><td class="xnote">+2% / +4 lb</td></tr>
+    <tr><td>Close-Grip Bench</td><td class="pw">3×8 @ 66% (211 lb)</td><td class="pv">3×8 @ 68% (218 lb)</td><td class="xnote">+2% / +7 lb</td></tr>
+    <tr><td>Barbell Row</td><td class="pw">4×8 @ 63% (274 lb)</td><td class="pv">4×8 @ 65% (283 lb)</td><td class="xnote">+2% / +9 lb</td></tr>
+    <tr><td>Cardio duration</td><td class="pw">28–32 min</td><td class="pv">30–35 min</td><td class="xnote">+2–3 min</td></tr>
+  </table>
+</div>
+<div class="al al-grn"><h4>Everything Else Stays the Same</h4><ul>
+  <li>Session D hypertrophy: add 2.5–5 lb to DB movements where previous weeks felt easy with 1–2 reps in reserve</li>
+  <li>Station workout, golf day order of operations: unchanged</li>
+  <li>Cardio: increase to 30–35 min Zone 2</li>
+</ul></div>
+</div>
+
+<div id="p2-w56" class="wd">
+<div class="wk-banner">
+  <div class="wk-title">Weeks 5–6 (June Wk3–4) — Final Build <span class="change-tag">↑ CHANGE</span></div>
+  <div class="wk-note">Run both weeks · Golf is 4 rounds/wk · Last heavy volume before peak golf</div>
+  <div class="wk-loads">Snatch ~87% feel → 3×2 @ 78% (168) · C&amp;J ~87% feel → 3×2 @ 78% (222) · Squat 5×4 @ 76% (315) · Bench ~87% feel → 4×3 @ 80% (256) · TBD 4×4 @ 72% (328)</div>
+</div>
+<div class="prog-box">
+  <h5>What Changes Weeks 5–6 vs Weeks 3–4</h5>
+  <table class="prog-table">
+    <tr><th>Exercise</th><th>Wks 3–4</th><th>Wks 5–6</th><th>Δ</th></tr>
+    <tr><td>Snatch heavy single target</td><td class="pw">~85% feel ≈ 183 lb / RPE 8</td><td class="pv">~87% feel ≈ 187 lb / RPE 8–8.5</td><td class="xnote">+2% feel / +4 lb</td></tr>
+    <tr><td>Snatch back-offs (3×2)</td><td class="pw">76% = 163 lb</td><td class="pv">78% = 168 lb</td><td class="xnote">+2% / +5 lb</td></tr>
+    <tr><td>C&amp;J heavy single target</td><td class="pw">~85% feel ≈ 242 lb / RPE 8</td><td class="pv">~87% feel ≈ 248 lb / RPE 8–8.5</td><td class="xnote">+2% feel / +6 lb</td></tr>
+    <tr><td>C&amp;J back-offs (3×2)</td><td class="pw">76% = 217 lb</td><td class="pv">78% = 222 lb</td><td class="xnote">+2% / +5 lb</td></tr>
+    <tr><td>Back Squat</td><td class="pw">5×5 @ 73% (303 lb)</td><td class="pv">5×4 @ 76% (315 lb) — drop 1 rep, add %</td><td class="xnote">+3%, −1 rep</td></tr>
+    <tr><td>Front Squat (pause)</td><td class="pw">3×4 @ 65% (221 lb)</td><td class="pv">3×4 @ 67% (278 lb)</td><td class="xnote">+2% / +7 lb</td></tr>
+    <tr><td>Trap Bar DL</td><td class="pw">4×5 @ 70% (319 lb)</td><td class="pv">4×4 @ 72% (328 lb) — drop 1 rep</td><td class="xnote">+2%, −1 rep</td></tr>
+    <tr><td>Bench heavy single target</td><td class="pw">~85% feel ≈ 272 lb / RPE 8</td><td class="pv">~87% feel ≈ 278 lb / RPE 8–8.5</td><td class="xnote">+2% feel / +6 lb</td></tr>
+    <tr><td>Bench back-offs (4×3)</td><td class="pw">78% = 250 lb</td><td class="pv">80% = 256 lb</td><td class="xnote">+2% / +6 lb</td></tr>
+    <tr><td>Floor Press</td><td class="pw">4×5 @ 72% (230 lb)</td><td class="pv">4×5 @ 74% (237 lb)</td><td class="xnote">+2% / +7 lb</td></tr>
+    <tr><td>OHP</td><td class="pw">4×6 @ 69% (135 lb)</td><td class="pv">4×6 @ 71% (138 lb)</td><td class="xnote">+2% / +3 lb</td></tr>
+    <tr><td>Close-Grip Bench</td><td class="pw">3×8 @ 68% (218 lb)</td><td class="pv">3×8 @ 70% (224 lb)</td><td class="xnote">+2% / +6 lb</td></tr>
+    <tr><td>Barbell Row</td><td class="pw">4×8 @ 65% (283 lb)</td><td class="pv">4×6 @ 68% (296 lb) — drop 2 reps, more intensity</td><td class="xnote">+3%, −2 reps</td></tr>
+  </table>
+</div>
+<div class="al al-fire"><h4>Golf Is Now 4 Rounds/Week — Adjust Scheduling</h4><ul>
+  <li>Never schedule Session A or C (heavy lower/Oly) the day before or after 18 holes</li>
+  <li>Session B (bench) and Session D (hypertrophy) can go adjacent to golf — zero spinal load</li>
+  <li>If shift pattern means you can only fit 3 gym sessions this week: drop Session D, keep A, B, and C</li>
+</ul></div>
+</div>
+</div>
+
+<!-- ██ BLOCK 3 ██ -->
+<div id="p3" class="pd">
+<div class="pi"><strong>Block 3 — Peak Golf · July–August · 9 Weeks</strong><br>
+Golf is 5 rounds/wk. This is the block that broke your back last year. Fix: 3 gym sessions/wk. Full squat Oly stays — heavy singles are in — but back-offs drop from 3 to 2. Bench does NOT reduce. Hypertrophy session stays. Grouped into 3-week micro-blocks (same % for 3 weeks, then a small jump).</div>
+<div class="wtabs">
+  <button class="wt on" onclick="sW('p3','w13',this)">Wks 1–3 (Early Jul)</button>
+  <button class="wt" onclick="sW('p3','w46',this)">Wks 4–6 (Late Jul)</button>
+  <button class="wt" onclick="sW('p3','w79',this)">Wks 7–9 (August)</button>
+</div>
+<div class="al al-blu" style="margin-bottom:14px;"><h4>Block 3 Weekly Structure — Every Week</h4><ul>
+  <li><strong>Session A (2 days post-shift, NOT adjacent to golf):</strong> Full Oly + Squat + Trap Bar DL. Never skip this one.</li>
+  <li><strong>Session B (not adjacent to heavy lower body day):</strong> Bench heavy + Spoto + Tricep. Can be closer to golf — no spinal load.</li>
+  <li><strong>Station workout (shift):</strong> Upper + core + Zone 2. Unchanged.</li>
+  <li><strong>Session C (off day — can be day after golf if SIJ clear):</strong> Hypertrophy + Beach + lighter trap bar.</li>
+  <li><strong>Cardio 2×/wk:</strong> Easy 20–25 min run or bike only. Golf walking is your Zone 2 base.</li>
+</ul></div>
+
+<div id="p3-w13" class="wd on">
+<div class="wk-banner">
+  <div class="wk-title">Weeks 1–3 (Early July) — Transition into Peak Golf</div>
+  <div class="wk-note">Run 3 consecutive weeks at these numbers</div>
+  <div class="wk-loads">Snatch ~85% feel → 2×2 @ 78% (168) · C&amp;J ~85% feel → 2×2 @ 78% (222) · Squat 4×3 @ 80% (332) · Bench ~86% feel → 4×3 @ 80% (256) · TBD A: 3×4 @ 74% (337) · TBD C: 3×6 @ 65% (296)</div>
+</div>
+<div class="daygrid">
+<div class="dc">
+  <div class="dch"><div class="dcn">Session A — Full Oly + Squat</div><div class="badge b-oly">Singles ~85% feel / RPE 8–8.5 → 2×2 BO</div></div>
+  <div class="dcb">
+    <table class="xt">
+      <tr><th>Exercise</th><th>Sets × Reps</th><th>Load</th><th>RPE</th><th>Notes</th></tr>
+      <tr><td class="xn">Snatch — build to heavy single</td><td>Warm-up + 1 single</td><td class="xl">~85% feel ≈ 183 lb</td><td class="xnote">RPE 8–8.5</td><td class="xnote">Leave 1 definite rep in tank. Back-offs reduce to 2 sets this block.</td></tr>
+      <tr><td class="xn">Snatch — back-off sets</td><td>2 × 2</td><td class="xl">78% = 168 lb</td><td class="xnote">RPE 7</td><td class="xnote">2 sets instead of 3 — volume managed for golf</td></tr>
+      <tr><td class="xn">Clean &amp; Jerk — build to heavy single</td><td>Warm-up + 1 single</td><td class="xl">~85% feel ≈ 242 lb</td><td class="xnote">RPE 8–8.5</td><td class="xnote">Full squat clean, full jerk. Same rule.</td></tr>
+      <tr><td class="xn">C&amp;J — back-off sets</td><td>2 × 2</td><td class="xl">78% = 222 lb</td><td class="xnote">RPE 7</td><td class="xnote">2 back-offs</td></tr>
+      <tr><td class="xn">Back Squat</td><td>4 × 3</td><td class="xl">80% = 332 lb</td><td class="xnote">RPE 8</td><td class="xnote">Heavy but not grinding. Leave 1–2 in tank.</td></tr>
+      <tr><td class="xn">Trap Bar DL</td><td>3 × 4</td><td class="xl">74% = 337 lb</td><td class="xnote">RPE 7.5</td><td class="xnote">Maintain hinge strength. No grinders.</td></tr>
+      <tr><td class="xn">Pallof Press</td><td>3 × 12 ea</td><td class="xl">Cable</td><td class="xnote">—</td><td class="xnote">Anti-rotation always</td></tr>
+    </table>
+    <div class="dnote">This session is why you won't lose your Oly lifts over summer. Heavy single maintains the neural pattern even with reduced volume.</div>
+  </div>
+</div>
+<div class="dc">
+  <div class="dch"><div class="dcn">Session B — Bench + Tricep</div><div class="badge b-bench">Single ~86% feel / RPE 8.5 → 4×3 @ 80%</div></div>
+  <div class="dcb">
+    <table class="xt">
+      <tr><th>Exercise</th><th>Sets × Reps</th><th>Load</th><th>RPE</th><th>Notes</th></tr>
+      <tr><td class="xn">Bench — build to heavy set</td><td>Warm-up + 1 heavy set</td><td class="xl">~86% feel ≈ 275 lb</td><td class="xnote">RPE 8.5</td><td class="xnote">Bench does NOT reduce in golf season. Push this.</td></tr>
+      <tr><td class="xn">Bench — back-off sets</td><td>4 × 3</td><td class="xl">80% = 256 lb</td><td class="xnote">RPE 7.5</td><td class="xnote">4 back-offs stay — bench volume doesn't drop</td></tr>
+      <tr><td class="xn">Spoto Press (2" off chest)</td><td>4 × 5</td><td class="xl">72% = 230 lb</td><td class="xnote">RPE 7</td><td class="xnote">Pause just off chest — kills bounce, builds bottom</td></tr>
+      <tr><td class="xn">Close-Grip Bench</td><td>3 × 8</td><td class="xl">70% = 224 lb</td><td class="xnote">RPE 7</td><td class="xnote">Tricep lockout strength</td></tr>
+      <tr><td class="xn">Weighted Dips</td><td>4 × 8</td><td class="xl">Moderate-Heavy</td><td class="xnote">RPE 8</td><td class="xnote">Load these — they drive bench</td></tr>
+      <tr><td class="xn">Skull Crusher</td><td>4 × 10</td><td class="xl">Moderate</td><td class="xnote">RPE 8</td><td class="xnote">Tricep mass</td></tr>
+      <tr><td class="xn">OHP (strict)</td><td>3 × 6</td><td class="xl">70% = 137 lb</td><td class="xnote">RPE 7</td><td class="xnote">Shoulder strength</td></tr>
+    </table>
+    <div class="dnote">Zero SIJ demand. Bench goes UP during peak golf season because there's nothing holding it back.</div>
+  </div>
+</div>
+<div class="dc">
+  <div class="dch"><div class="dcn">Session C — Hypertrophy + Light Hinge</div><div class="badge b-beach">Muscle + Maintenance</div></div>
+  <div class="dcb">
+    <table class="xt">
+      <tr><th>Exercise</th><th>Sets × Reps</th><th>Load</th><th>RPE</th><th>Notes</th></tr>
+      <tr><td class="xn">Trap Bar DL (lighter)</td><td>3 × 6</td><td class="xl">65% = 296 lb</td><td class="xnote">RPE 6</td><td class="xnote">Maintain hinge pattern — not a max effort today</td></tr>
+      <tr><td class="xn">Incline DB Press</td><td>4 × 12</td><td class="xl">Moderate-Heavy</td><td class="xnote">RPE 8</td><td class="xnote">Upper chest</td></tr>
+      <tr><td class="xn">Cable Fly</td><td>3 × 15</td><td class="xl">Light-Mod</td><td class="xnote">RPE 7</td><td class="xnote">Chest isolation</td></tr>
+      <tr><td class="xn">DB Lateral Raise</td><td>4 × 15</td><td class="xl">Light</td><td class="xnote">RPE 7</td><td class="xnote">Shoulder width</td></tr>
+      <tr><td class="xn">EZ Bar Curl</td><td>4 × 12</td><td class="xl">Moderate</td><td class="xnote">RPE 8</td><td class="xnote">Bicep volume</td></tr>
+      <tr><td class="xn">Cable Tricep Pushdown</td><td>4 × 15</td><td class="xl">Moderate</td><td class="xnote">RPE 8</td><td class="xnote">Tricep volume</td></tr>
+      <tr><td class="xn">Single-Arm DB Row</td><td>3 × 10 ea</td><td class="xl">Moderate</td><td class="xnote">RPE 7</td><td class="xnote">Back thickness</td></tr>
+      <tr><td class="xn">Face Pull</td><td>4 × 20</td><td class="xl">Band</td><td class="xnote">—</td><td class="xnote">Always finish with this</td></tr>
+    </table>
+    <div class="dnote">Can go adjacent to a golf day — no significant spinal loading.</div>
+  </div>
+</div>
+</div>
+</div>
+
+<div id="p3-w46" class="wd">
+<div class="wk-banner">
+  <div class="wk-title">Weeks 4–6 (Late July) — Load Increase <span class="change-tag">↑ CHANGE</span></div>
+  <div class="wk-note">Run 3 consecutive weeks at these numbers</div>
+  <div class="wk-loads">Snatch ~87% feel → 2×2 @ 80% (172) · C&amp;J ~87% feel → 2×2 @ 80% (228) · Squat 4×3 @ 82% (340) · Bench ~88% feel → 4×3 @ 82% (262) · TBD A: 3×4 @ 76% (346) · TBD C: 3×6 @ 67% (305)</div>
+</div>
+<div class="prog-box">
+  <h5>What Changes Weeks 4–6 vs Weeks 1–3</h5>
+  <table class="prog-table">
+    <tr><th>Exercise</th><th>Wks 1–3</th><th>Wks 4–6</th><th>Δ</th></tr>
+    <tr><td>Snatch heavy single target</td><td class="pw">~85% feel ≈ 183 lb / RPE 8–8.5</td><td class="pv">~87% feel ≈ 187 lb / RPE 8.5</td><td class="xnote">+2% feel / +4 lb</td></tr>
+    <tr><td>Snatch back-offs (2×2)</td><td class="pw">78% = 168 lb</td><td class="pv">80% = 172 lb</td><td class="xnote">+2% / +4 lb</td></tr>
+    <tr><td>C&amp;J heavy single target</td><td class="pw">~85% feel ≈ 242 lb / RPE 8–8.5</td><td class="pv">~87% feel ≈ 248 lb / RPE 8.5</td><td class="xnote">+2% feel / +6 lb</td></tr>
+    <tr><td>C&amp;J back-offs (2×2)</td><td class="pw">78% = 222 lb</td><td class="pv">80% = 228 lb</td><td class="xnote">+2% / +6 lb</td></tr>
+    <tr><td>Back Squat (4×3)</td><td class="pw">80% = 332 lb</td><td class="pv">82% = 340 lb</td><td class="xnote">+2% / +8 lb</td></tr>
+    <tr><td>Trap Bar DL — Session A (3×4)</td><td class="pw">74% = 337 lb</td><td class="pv">76% = 346 lb</td><td class="xnote">+2% / +9 lb</td></tr>
+    <tr><td>Trap Bar DL — Session C (3×6)</td><td class="pw">65% = 296 lb</td><td class="pv">67% = 305 lb</td><td class="xnote">+2% / +9 lb</td></tr>
+    <tr><td>Bench heavy single target</td><td class="pw">~86% feel ≈ 275 lb / RPE 8.5</td><td class="pv">~88% feel ≈ 282 lb / RPE 8.5</td><td class="xnote">+2% feel / +7 lb</td></tr>
+    <tr><td>Bench back-offs (4×3)</td><td class="pw">80% = 256 lb</td><td class="pv">82% = 262 lb</td><td class="xnote">+2% / +6 lb</td></tr>
+    <tr><td>Spoto Press (4×5)</td><td class="pw">72% = 230 lb</td><td class="pv">74% = 237 lb</td><td class="xnote">+2% / +7 lb</td></tr>
+    <tr><td>Close-Grip Bench (3×8)</td><td class="pw">70% = 224 lb</td><td class="pv">72% = 230 lb</td><td class="xnote">+2% / +6 lb</td></tr>
+  </table>
+</div>
+<div class="al al-grn"><h4>Everything Else Stays the Same</h4><ul>
+  <li>Session C hypertrophy: add 2.5 lb to DB movements where previous 3 weeks felt easy with 1–2 in reserve</li>
+  <li>Station workout and golf day order of operations: unchanged</li>
+  <li>OHP stays at 3×6 @ 70% (137 lb) — increases in Block 4</li>
+</ul></div>
+</div>
+
+<div id="p3-w79" class="wd">
+<div class="wk-banner">
+  <div class="wk-title">Weeks 7–9 (August) — Final Peak Golf Push <span class="change-tag">↑ CHANGE</span></div>
+  <div class="wk-note">Run 3 consecutive weeks · Highest total load on your body — back protocol is critical</div>
+  <div class="wk-loads">Snatch ~88% feel → 2×2 @ 82% (176) · C&amp;J ~88% feel → 2×2 @ 82% (234) · Squat 4×3 @ 84% (349) · Bench ~90% feel → 4×3 @ 84% (269) · TBD A: 3×4 @ 78% (355) · TBD C: 3×6 @ 68% (309)</div>
+</div>
+<div class="prog-box">
+  <h5>What Changes Weeks 7–9 vs Weeks 4–6</h5>
+  <table class="prog-table">
+    <tr><th>Exercise</th><th>Wks 4–6</th><th>Wks 7–9</th><th>Δ</th></tr>
+    <tr><td>Snatch heavy single target</td><td class="pw">~87% feel ≈ 187 lb / RPE 8.5</td><td class="pv">~88% feel ≈ 189 lb / RPE 8.5</td><td class="xnote">+1% feel / +2 lb</td></tr>
+    <tr><td>Snatch back-offs (2×2)</td><td class="pw">80% = 172 lb</td><td class="pv">82% = 176 lb</td><td class="xnote">+2% / +4 lb</td></tr>
+    <tr><td>C&amp;J heavy single target</td><td class="pw">~87% feel ≈ 248 lb / RPE 8.5</td><td class="pv">~88% feel ≈ 251 lb / RPE 8.5</td><td class="xnote">+1% feel / +3 lb</td></tr>
+    <tr><td>C&amp;J back-offs (2×2)</td><td class="pw">80% = 228 lb</td><td class="pv">82% = 234 lb</td><td class="xnote">+2% / +6 lb</td></tr>
+    <tr><td>Back Squat (4×3)</td><td class="pw">82% = 340 lb</td><td class="pv">84% = 349 lb</td><td class="xnote">+2% / +9 lb</td></tr>
+    <tr><td>Trap Bar DL — Session A (3×4)</td><td class="pw">76% = 346 lb</td><td class="pv">78% = 355 lb</td><td class="xnote">+2% / +9 lb</td></tr>
+    <tr><td>Trap Bar DL — Session C (3×6)</td><td class="pw">67% = 305 lb</td><td class="pv">68% = 309 lb</td><td class="xnote">+1% / +4 lb</td></tr>
+    <tr><td>Bench heavy single target</td><td class="pw">~88% feel ≈ 282 lb / RPE 8.5</td><td class="pv">~90% feel ≈ 288 lb / RPE 9</td><td class="xnote">+2% feel / +6 lb</td></tr>
+    <tr><td>Bench back-offs (4×3)</td><td class="pw">82% = 262 lb</td><td class="pv">84% = 269 lb</td><td class="xnote">+2% / +7 lb</td></tr>
+    <tr><td>Spoto Press (4×5)</td><td class="pw">74% = 237 lb</td><td class="pv">76% = 243 lb</td><td class="xnote">+2% / +6 lb</td></tr>
+    <tr><td>Close-Grip Bench (3×8)</td><td class="pw">72% = 230 lb</td><td class="pv">74% = 237 lb</td><td class="xnote">+2% / +7 lb</td></tr>
+  </table>
+</div>
+<div class="al al-red"><h4>August Warning System</h4><ul>
+  <li>SIJ pain 2–3/10: switch Oly to hang that week only. Keep everything else. Tell physio next session.</li>
+  <li>SIJ pain 3–4/10: cap golf at 2 rounds. Drop all DL. Squats OK if pain-free in warmup. Ice 15 min × 3/day.</li>
+  <li>Pain radiating into glute or leg: stop all loading. Disc or nerve, not SIJ. Physio same week.</li>
+  <li>If you miss a week: come back at Wks 4–6 numbers, not where you left off.</li>
+</ul></div>
+</div>
+</div>
+
+<!-- ██ BLOCK 4 ██ -->
+<div id="p4" class="pd">
+<div class="pi"><strong>Block 4 — Golf Wind-Down + Push · September · 4 Weeks</strong><br>
+Golf drops to 4 rounds/wk. Gym rebuilds to 4 proper sessions. Oly loads push to real heavy territory. Back-off sets return to 3. Bench inches toward true max. Sprints/plyo every 10–14 days. Conventional DL returns Week 4 only if SIJ pain-free for 2+ consecutive weeks. Each week written individually.</div>
+<div class="wtabs">
+  <button class="wt on" onclick="sW('p4','w1',this)">Week 1</button>
+  <button class="wt" onclick="sW('p4','w2',this)">Week 2</button>
+  <button class="wt" onclick="sW('p4','w3',this)">Week 3</button>
+  <button class="wt" onclick="sW('p4','w4',this)">Week 4</button>
+</div>
+<div class="al al-blu" style="margin-bottom:14px;"><h4>Block 4 Weekly Structure</h4><ul>
+  <li><strong>Session A (2 days post-shift):</strong> Snatch + Squat — loads climbing</li>
+  <li><strong>Session B (next off day):</strong> Bench heavy + floor press + upper</li>
+  <li><strong>Session C (off day):</strong> C&amp;J + DL + Pull</li>
+  <li><strong>Session D (off day):</strong> Hypertrophy + Arms. Sprint/plyo before session every 10–14 days if SIJ clear.</li>
+  <li><strong>Station workout (shift):</strong> Same as always</li>
+  <li><strong>Cardio 2×/wk:</strong> 30–35 min Zone 2. One session can be replaced by sprint session.</li>
+</ul></div>
+
+<div id="p4-w1" class="wd on">
+<div class="wk-banner">
+  <div class="wk-title">Week 1 (Sept Wk1) — Volume Returns</div>
+  <div class="wk-loads">Snatch ~88% feel → 3×2 @ 82% (176) · C&amp;J ~88% feel → 3×2 @ 82% (234) · Squat 5×3 @ 85% (353) · Bench ~90% feel → 4×3 @ 83% (266) · TBD 4×4 @ 78% (355)</div>
+</div>
+<div class="daygrid">
+<div class="dc">
+  <div class="dch"><div class="dcn">Session A — Snatch + Squat</div><div class="badge b-oly">Single ~88% feel / RPE 8.5 → 3×2 @ 82%</div></div>
+  <div class="dcb">
+    <table class="xt">
+      <tr><th>Exercise</th><th>Sets × Reps</th><th>Load</th><th>RPE</th><th>Notes</th></tr>
+      <tr><td class="xn">Snatch — build to heavy single</td><td>Warm-up + 1 single</td><td class="xl">~88% feel ≈ 189 lb</td><td class="xnote">RPE 8.5</td><td class="xnote">Back to 3 back-off sets. Volume returns.</td></tr>
+      <tr><td class="xn">Snatch — back-off sets</td><td>3 × 2</td><td class="xl">82% = 176 lb</td><td class="xnote">RPE 7.5</td><td class="xnote">3 back-offs return from Block 3's 2</td></tr>
+      <tr><td class="xn">Snatch Pull</td><td>4 × 4</td><td class="xl">92% of single ≈ 174 lb</td><td class="xnote">RPE 7.5</td><td class="xnote">Over-weight pulls build bar speed</td></tr>
+      <tr><td class="xn">Back Squat</td><td>5 × 3</td><td class="xl">85% = 353 lb</td><td class="xnote">RPE 8.5</td><td class="xnote">5×3 — real strength work returns</td></tr>
+      <tr><td class="xn">Front Squat (pause 2s)</td><td>3 × 3</td><td class="xl">76% = 258 lb</td><td class="xnote">RPE 7.5</td><td class="xnote">Jerk receiving + control</td></tr>
+      <tr><td class="xn">Suitcase Carry 30m</td><td>4 rounds</td><td class="xl">Heavy</td><td class="xnote">—</td><td class="xnote">Always</td></tr>
+      <tr><td class="xn">Dead Bug (loaded)</td><td>3 × 10 ea</td><td class="xl">Light plate</td><td class="xnote">—</td><td class="xnote">Core maintenance</td></tr>
+    </table>
+  </div>
+</div>
+<div class="dc">
+  <div class="dch"><div class="dcn">Session B — Bench + Upper Push</div><div class="badge b-bench">Single ~90% feel / RPE 9 → 4×3 @ 83%</div></div>
+  <div class="dcb">
+    <table class="xt">
+      <tr><th>Exercise</th><th>Sets × Reps</th><th>Load</th><th>RPE</th><th>Notes</th></tr>
+      <tr><td class="xn">Bench — build to heavy single</td><td>Warm-up + 1 heavy set</td><td class="xl">~90% feel ≈ 288 lb</td><td class="xnote">RPE 9</td><td class="xnote">Getting close to real max territory</td></tr>
+      <tr><td class="xn">Bench — back-off sets</td><td>4 × 3</td><td class="xl">83% = 266 lb</td><td class="xnote">RPE 8</td><td class="xnote">These should feel heavy and fast</td></tr>
+      <tr><td class="xn">Spoto Press</td><td>4 × 4</td><td class="xl">76% = 243 lb</td><td class="xnote">RPE 7.5</td><td class="xnote">Bottom-end strength</td></tr>
+      <tr><td class="xn">Floor Press</td><td>3 × 5</td><td class="xl">76% = 243 lb</td><td class="xnote">RPE 7.5</td><td class="xnote">Raw pressing strength</td></tr>
+      <tr><td class="xn">Weighted Dips</td><td>4 × 8</td><td class="xl">Heavy</td><td class="xnote">RPE 8</td><td class="xnote">Load these as much as possible</td></tr>
+      <tr><td class="xn">Skull Crusher</td><td>4 × 10</td><td class="xl">Moderate</td><td class="xnote">RPE 8</td><td class="xnote">Elbow fixed</td></tr>
+      <tr><td class="xn">Weighted Pull-Up</td><td>4 × 5</td><td class="xl">Heavy</td><td class="xnote">RPE 8</td><td class="xnote">Back thickness = better bench arch</td></tr>
+    </table>
+  </div>
+</div>
+<div class="dc">
+  <div class="dch"><div class="dcn">Session C — C&amp;J + Hinge + Pull</div><div class="badge b-oly">Single ~88% feel / RPE 8.5 → 3×2 @ 82%</div></div>
+  <div class="dcb">
+    <table class="xt">
+      <tr><th>Exercise</th><th>Sets × Reps</th><th>Load</th><th>RPE</th><th>Notes</th></tr>
+      <tr><td class="xn">Clean &amp; Jerk — build to heavy single</td><td>Warm-up + 1 single</td><td class="xl">~88% feel ≈ 251 lb</td><td class="xnote">RPE 8.5</td><td class="xnote">Full squat clean. Push these.</td></tr>
+      <tr><td class="xn">C&amp;J — back-off sets</td><td>3 × 2</td><td class="xl">82% = 234 lb</td><td class="xnote">RPE 7.5</td><td class="xnote">3 back-offs return</td></tr>
+      <tr><td class="xn">Clean Pull</td><td>4 × 4</td><td class="xl">92% of single ≈ 231 lb</td><td class="xnote">RPE 7.5</td><td class="xnote">Overweight pulls</td></tr>
+      <tr><td class="xn">Trap Bar DL</td><td>4 × 4</td><td class="xl">78% = 355 lb</td><td class="xnote">RPE 7.5</td><td class="xnote">Still trap bar. Conv. DL returns Week 4.</td></tr>
+      <tr><td class="xn">Barbell Row</td><td>4 × 8</td><td class="xl">70% = 305 lb</td><td class="xnote">RPE 7.5</td><td class="xnote">Horizontal volume</td></tr>
+      <tr><td class="xn">Lat Pulldown</td><td>3 × 12</td><td class="xl">Moderate</td><td class="xnote">RPE 7</td><td class="xnote">Width</td></tr>
+      <tr><td class="xn">Pallof Press</td><td>3 × 12 ea</td><td class="xl">Cable</td><td class="xnote">—</td><td class="xnote">Anti-rotation</td></tr>
+    </table>
+  </div>
+</div>
+<div class="dc">
+  <div class="dch"><div class="dcn">Session D — Hypertrophy + Sprint Day</div><div class="badge b-beach">+ Sprint Every 10–14 Days</div></div>
+  <div class="dcb">
+    <table class="xt">
+      <tr><th>Exercise</th><th>Sets × Reps</th><th>Load</th><th>RPE</th><th>Notes</th></tr>
+      <tr><td class="xn">IF SPRINT DAY: 6×40m sprints before everything else</td><td>See Cardio tab</td><td class="xl">Full 3 min rest</td><td class="xnote">SIJ symptom-free only</td><td class="xnote">Dynamic warmup mandatory</td></tr>
+      <tr><td class="xn">Box Jump 24" (sprint days only)</td><td>4 × 5</td><td class="xl">BW</td><td class="xnote">—</td><td class="xnote">Land soft, reset</td></tr>
+      <tr><td class="xn">Incline DB Press</td><td>4 × 12</td><td class="xl">Moderate-Heavy</td><td class="xnote">RPE 8</td><td class="xnote">Upper chest</td></tr>
+      <tr><td class="xn">DB Lateral Raise</td><td>4 × 15</td><td class="xl">Light</td><td class="xnote">RPE 7</td><td class="xnote">Shoulder width</td></tr>
+      <tr><td class="xn">EZ Bar Curl</td><td>4 × 12</td><td class="xl">Moderate</td><td class="xnote">RPE 8</td><td class="xnote">Bicep mass</td></tr>
+      <tr><td class="xn">Incline DB Curl</td><td>3 × 12</td><td class="xl">Light-Mod</td><td class="xnote">RPE 7</td><td class="xnote">Full stretch at bottom</td></tr>
+      <tr><td class="xn">Overhead Tricep Extension</td><td>4 × 12</td><td class="xl">Moderate</td><td class="xnote">RPE 8</td><td class="xnote">Long head tricep</td></tr>
+      <tr><td class="xn">Face Pull</td><td>4 × 20</td><td class="xl">Band</td><td class="xnote">—</td><td class="xnote">Always finish with this</td></tr>
+    </table>
+  </div>
+</div>
+</div>
+</div>
+
+<div id="p4-w2" class="wd">
+<div class="wk-banner">
+  <div class="wk-title">Week 2 (Sept Wk2) — Load Increase <span class="change-tag">↑ CHANGE</span></div>
+  <div class="wk-loads">Snatch ~89% feel → 3×2 @ 83% (178) · C&amp;J ~89% feel → 3×2 @ 83% (237) · Squat 5×3 @ 86% (357) · Bench ~91% feel → 4×3 @ 84% (269) · TBD 4×4 @ 80% (364)</div>
+</div>
+<div class="prog-box">
+  <h5>What Changes Week 2 vs Week 1</h5>
+  <table class="prog-table">
+    <tr><th>Exercise</th><th>Week 1</th><th>Week 2</th><th>Δ</th></tr>
+    <tr><td>Snatch heavy single</td><td class="pw">~88% feel ≈ 189 lb / RPE 8.5</td><td class="pv">~89% feel ≈ 191 lb / RPE 8.5</td><td class="xnote">+1% feel / +2 lb</td></tr>
+    <tr><td>Snatch back-offs (3×2)</td><td class="pw">82% = 176 lb</td><td class="pv">83% = 178 lb</td><td class="xnote">+1% / +2 lb</td></tr>
+    <tr><td>C&amp;J heavy single</td><td class="pw">~88% feel ≈ 251 lb / RPE 8.5</td><td class="pv">~89% feel ≈ 254 lb / RPE 8.5</td><td class="xnote">+1% feel / +3 lb</td></tr>
+    <tr><td>C&amp;J back-offs (3×2)</td><td class="pw">82% = 234 lb</td><td class="pv">83% = 237 lb</td><td class="xnote">+1% / +3 lb</td></tr>
+    <tr><td>Back Squat (5×3)</td><td class="pw">85% = 353 lb</td><td class="pv">86% = 357 lb</td><td class="xnote">+1% / +4 lb</td></tr>
+    <tr><td>Front Squat pause (3×3)</td><td class="pw">76% = 258 lb</td><td class="pv">77% = 265 lb</td><td class="xnote">+1% / +7 lb</td></tr>
+    <tr><td>Trap Bar DL (4×4)</td><td class="pw">78% = 355 lb</td><td class="pv">80% = 364 lb</td><td class="xnote">+2% / +9 lb</td></tr>
+    <tr><td>Bench heavy single</td><td class="pw">~90% feel ≈ 288 lb / RPE 9</td><td class="pv">~91% feel ≈ 291 lb / RPE 9</td><td class="xnote">+1% feel / +3 lb</td></tr>
+    <tr><td>Bench back-offs (4×3)</td><td class="pw">83% = 266 lb</td><td class="pv">84% = 269 lb</td><td class="xnote">+1% / +3 lb</td></tr>
+    <tr><td>Spoto Press (4×4)</td><td class="pw">76% = 243 lb</td><td class="pv">78% = 250 lb</td><td class="xnote">+2% / +7 lb</td></tr>
+    <tr><td>Barbell Row (4×8)</td><td class="pw">70% = 305 lb</td><td class="pv">72% = 313 lb</td><td class="xnote">+2% / +8 lb</td></tr>
+  </table>
+</div>
+</div>
+
+<div id="p4-w3" class="wd">
+<div class="wk-banner">
+  <div class="wk-title">Week 3 (Sept Wk3) — Push Harder <span class="change-tag">↑ CHANGE</span></div>
+  <div class="wk-loads">Snatch ~90% feel → 3×2 @ 84% (181) · C&amp;J ~90% feel → 3×2 @ 84% (240) · Squat 5×3 @ 87% (361) · Bench ~92% feel → 4×3 @ 85% (272) · TBD 4×3 @ 82% (373)</div>
+</div>
+<div class="prog-box">
+  <h5>What Changes Week 3 vs Week 2</h5>
+  <table class="prog-table">
+    <tr><th>Exercise</th><th>Week 2</th><th>Week 3</th><th>Δ</th></tr>
+    <tr><td>Snatch heavy single</td><td class="pw">~89% feel ≈ 191 lb</td><td class="pv">~90% feel ≈ 194 lb / RPE 9</td><td class="xnote">+1% feel / +3 lb</td></tr>
+    <tr><td>Snatch back-offs (3×2)</td><td class="pw">83% = 178 lb</td><td class="pv">84% = 181 lb</td><td class="xnote">+1% / +3 lb</td></tr>
+    <tr><td>C&amp;J heavy single</td><td class="pw">~89% feel ≈ 254 lb</td><td class="pv">~90% feel ≈ 257 lb / RPE 9</td><td class="xnote">+1% feel / +3 lb</td></tr>
+    <tr><td>C&amp;J back-offs (3×2)</td><td class="pw">83% = 237 lb</td><td class="pv">84% = 240 lb</td><td class="xnote">+1% / +3 lb</td></tr>
+    <tr><td>Back Squat (5×3)</td><td class="pw">86% = 357 lb</td><td class="pv">87% = 361 lb</td><td class="xnote">+1% / +4 lb</td></tr>
+    <tr><td>Trap Bar DL</td><td class="pw">4×4 @ 80% (364 lb)</td><td class="pv">4×3 @ 82% (373 lb) — drop 1 rep</td><td class="xnote">+2%, −1 rep</td></tr>
+    <tr><td>Bench heavy single</td><td class="pw">~91% feel ≈ 291 lb</td><td class="pv">~92% feel ≈ 294 lb / RPE 9</td><td class="xnote">+1% feel / +3 lb</td></tr>
+    <tr><td>Bench back-offs (4×3)</td><td class="pw">84% = 269 lb</td><td class="pv">85% = 272 lb</td><td class="xnote">+1% / +3 lb</td></tr>
+    <tr><td>Floor Press (3×5)</td><td class="pw">76% = 243 lb</td><td class="pv">78% = 250 lb</td><td class="xnote">+2% / +7 lb</td></tr>
+  </table>
+</div>
+</div>
+
+<div id="p4-w4" class="wd">
+<div class="wk-banner">
+  <div class="wk-title">Week 4 (Sept Wk4) — Conv. DL Returns <span class="change-tag">↑ CHANGE</span></div>
+  <div class="wk-loads">Snatch ~91% feel → 3×2 @ 85% (183) · C&amp;J ~91% feel → 3×2 @ 85% (242) · Squat 5×3 @ 88% (365) · Bench ~93% feel → 4×3 @ 86% (275) · CONV DL 4×4 @ 80% (348)</div>
+</div>
+<div class="prog-box">
+  <h5>What Changes Week 4 vs Week 3</h5>
+  <table class="prog-table">
+    <tr><th>Exercise</th><th>Week 3</th><th>Week 4</th><th>Δ</th></tr>
+    <tr><td>Snatch heavy single</td><td class="pw">~90% feel ≈ 194 lb / RPE 9</td><td class="pv">~91% feel ≈ 196 lb / RPE 9</td><td class="xnote">+1% feel / +2 lb</td></tr>
+    <tr><td>Snatch back-offs (3×2)</td><td class="pw">84% = 181 lb</td><td class="pv">85% = 183 lb</td><td class="xnote">+1% / +2 lb</td></tr>
+    <tr><td>C&amp;J heavy single</td><td class="pw">~90% feel ≈ 257 lb / RPE 9</td><td class="pv">~91% feel ≈ 260 lb / RPE 9</td><td class="xnote">+1% feel / +3 lb</td></tr>
+    <tr><td>C&amp;J back-offs (3×2)</td><td class="pw">84% = 240 lb</td><td class="pv">85% = 242 lb</td><td class="xnote">+1% / +2 lb</td></tr>
+    <tr><td>Back Squat (5×3)</td><td class="pw">87% = 361 lb</td><td class="pv">88% = 365 lb</td><td class="xnote">+1% / +4 lb</td></tr>
+    <tr><td>Deadlift</td><td class="pw">Trap bar 4×3 @ 82% (373 lb)</td><td class="pv">CONV DL 4×4 @ 80% (348 lb) — returns</td><td class="xnote">Conv. DL back if SIJ clear 2+ wks</td></tr>
+    <tr><td>Bench heavy single</td><td class="pw">~92% feel ≈ 294 lb / RPE 9</td><td class="pv">~93% feel ≈ 298 lb / RPE 9+</td><td class="xnote">+1% feel / +4 lb</td></tr>
+    <tr><td>Bench back-offs (4×3)</td><td class="pw">85% = 272 lb</td><td class="pv">86% = 275 lb</td><td class="xnote">+1% / +3 lb</td></tr>
+  </table>
+</div>
+<div class="al al-fire"><h4>Conventional DL Returns — Do It Right</h4><ul>
+  <li>Only if SIJ has been completely pain-free for 2+ weeks. If not: stay on trap bar one more week.</li>
+  <li>Start at 80% (348 lb) — not where you left off in April. Build in carefully.</li>
+  <li>If any SIJ response to conventional DL: back to trap bar for remainder of Block 4. Conv DL fully available in Block 5.</li>
+</ul></div>
+</div>
+</div>
+
+<!-- ██ BLOCK 5 ██ -->
+<div id="p5" class="pd">
+<div class="pi"><strong>Block 5 — Strength Rebuild · October · 4 Weeks</strong><br>
+Golf drops to 3 rounds/wk then ends. 5 gym sessions/wk. Conv. DL fully integrated. Oly lifts approach true max territory. Bench closes in on new 1RM. By end of Week 4 you're ready for November max attempts.</div>
+<div class="wtabs">
+  <button class="wt on" onclick="sW('p5','w1',this)">Week 1</button>
+  <button class="wt" onclick="sW('p5','w2',this)">Week 2</button>
+  <button class="wt" onclick="sW('p5','w3',this)">Week 3</button>
+  <button class="wt" onclick="sW('p5','w4',this)">Week 4</button>
+</div>
+<div class="al al-blu" style="margin-bottom:14px;"><h4>Block 5 — 5 Session Weekly Structure</h4><ul>
+  <li><strong>Session A:</strong> Snatch + Back Squat + Front Squat</li>
+  <li><strong>Session B:</strong> Bench + Floor Press + Spoto Press + Tricep</li>
+  <li><strong>Session C:</strong> C&amp;J + Conventional DL + Pull</li>
+  <li><strong>Session D:</strong> Upper volume — OHP, weighted pull-ups, arms, shoulders</li>
+  <li><strong>Session E:</strong> Lower accessory — front squat, RDL, legs, carries</li>
+  <li><strong>Cardio 2×/wk:</strong> 28–30 min Zone 2 run or bike</li>
+</ul></div>
+
+<div id="p5-w1" class="wd on">
+<div class="wk-banner">
+  <div class="wk-title">Week 1 (Oct Wk1) — 5 Sessions Start · Slight Reset</div>
+  <div class="wk-note">Deliberate slight pullback from Block 4 peak — sets go up, singles start fresh arc</div>
+  <div class="wk-loads">Snatch ~88% feel → 3×2 @ 82% (176) · C&amp;J ~88% feel → 3×2 @ 82% (234) · Squat 5×3 @ 85% (353) · Bench ~90% feel → 4×3 @ 84% (269) · Conv DL 4×4 @ 80% (348)</div>
+</div>
+<div class="daygrid">
+<div class="dc">
+  <div class="dch"><div class="dcn">Session A — Snatch + Squat</div><div class="badge b-oly">Single ~88% feel / RPE 8.5 → 3×2 @ 82%</div></div>
+  <div class="dcb">
+    <table class="xt">
+      <tr><th>Exercise</th><th>Sets × Reps</th><th>Load</th><th>RPE</th><th>Notes</th></tr>
+      <tr><td class="xn">Snatch — build to heavy single</td><td>Warm-up + 1 single</td><td class="xl">~88% feel ≈ 189 lb</td><td class="xnote">RPE 8.5</td><td class="xnote">Deliberate reset — builds over 4 weeks to new peak</td></tr>
+      <tr><td class="xn">Snatch — back-off sets</td><td>3 × 2</td><td class="xl">82% = 176 lb</td><td class="xnote">RPE 7.5</td><td class="xnote">—</td></tr>
+      <tr><td class="xn">Snatch Pull</td><td>5 × 3</td><td class="xl">95% of single ≈ 180 lb</td><td class="xnote">RPE 8</td><td class="xnote">Near-max overload pulls</td></tr>
+      <tr><td class="xn">Back Squat</td><td>5 × 3</td><td class="xl">85% = 353 lb</td><td class="xnote">RPE 8.5</td><td class="xnote">Drive it. Intent matters.</td></tr>
+      <tr><td class="xn">Front Squat</td><td>3 × 3</td><td class="xl">78% = 265 lb</td><td class="xnote">RPE 7.5</td><td class="xnote">Jerk receiving position strength</td></tr>
+      <tr><td class="xn">GHR or Nordic Curl</td><td>4 × 6</td><td class="xl">BW+</td><td class="xnote">RPE 7</td><td class="xnote">Posterior chain protection</td></tr>
+    </table>
+  </div>
+</div>
+<div class="dc">
+  <div class="dch"><div class="dcn">Session B — Bench Push</div><div class="badge b-bench">Single ~90% feel / RPE 9 → 4×3 @ 84%</div></div>
+  <div class="dcb">
+    <table class="xt">
+      <tr><th>Exercise</th><th>Sets × Reps</th><th>Load</th><th>RPE</th><th>Notes</th></tr>
+      <tr><td class="xn">Bench — build to heavy single</td><td>Warm-up + 1 heavy set</td><td class="xl">~90% feel ≈ 288 lb</td><td class="xnote">RPE 9</td><td class="xnote">Close to real max. Treat it that way.</td></tr>
+      <tr><td class="xn">Bench — back-off sets</td><td>4 × 3</td><td class="xl">84% = 269 lb</td><td class="xnote">RPE 8</td><td class="xnote">Should feel heavy and fast</td></tr>
+      <tr><td class="xn">Floor Press</td><td>4 × 4</td><td class="xl">78% = 250 lb</td><td class="xnote">RPE 8</td><td class="xnote">Raw pressing strength</td></tr>
+      <tr><td class="xn">Spoto Press</td><td>3 × 5</td><td class="xl">74% = 237 lb</td><td class="xnote">RPE 7.5</td><td class="xnote">Bottom strength</td></tr>
+      <tr><td class="xn">Weighted Dips</td><td>4 × 6</td><td class="xl">Heavy</td><td class="xnote">RPE 8.5</td><td class="xnote">Load heavily</td></tr>
+      <tr><td class="xn">Close-Grip Bench</td><td>3 × 6</td><td class="xl">74% = 237 lb</td><td class="xnote">RPE 8</td><td class="xnote">Lockout strength</td></tr>
+      <tr><td class="xn">Skull Crusher</td><td>4 × 10</td><td class="xl">Moderate</td><td class="xnote">RPE 8</td><td class="xnote">Tricep mass = lockout</td></tr>
+    </table>
+  </div>
+</div>
+<div class="dc">
+  <div class="dch"><div class="dcn">Session C — C&amp;J + Conv. DL + Pull</div><div class="badge b-oly">Single ~88% feel → 3×2 @ 82% · Conv DL 80%</div></div>
+  <div class="dcb">
+    <table class="xt">
+      <tr><th>Exercise</th><th>Sets × Reps</th><th>Load</th><th>RPE</th><th>Notes</th></tr>
+      <tr><td class="xn">Clean &amp; Jerk — build to heavy single</td><td>Warm-up + 1 single</td><td class="xl">~88% feel ≈ 251 lb</td><td class="xnote">RPE 8.5</td><td class="xnote">Full squat clean, full jerk</td></tr>
+      <tr><td class="xn">C&amp;J — back-off sets</td><td>3 × 2</td><td class="xl">82% = 234 lb</td><td class="xnote">RPE 7.5</td><td class="xnote">—</td></tr>
+      <tr><td class="xn">Clean Pull</td><td>5 × 3</td><td class="xl">95% of single ≈ 239 lb</td><td class="xnote">RPE 8</td><td class="xnote">Near-max pulls</td></tr>
+      <tr><td class="xn">Conventional Deadlift</td><td>4 × 4</td><td class="xl">80% = 348 lb</td><td class="xnote">RPE 8</td><td class="xnote">Build carefully. This is Week 2 of conv. DL.</td></tr>
+      <tr><td class="xn">Barbell Row</td><td>4 × 8</td><td class="xl">70% = 305 lb</td><td class="xnote">RPE 7.5</td><td class="xnote">Back volume</td></tr>
+      <tr><td class="xn">Lat Pulldown</td><td>3 × 12</td><td class="xl">Moderate</td><td class="xnote">RPE 7</td><td class="xnote">Width</td></tr>
+    </table>
+  </div>
+</div>
+<div class="dc">
+  <div class="dch"><div class="dcn">Session D — Upper Volume</div><div class="badge b-lift">OHP + Pull + Arms</div></div>
+  <div class="dcb">
+    <table class="xt">
+      <tr><th>Exercise</th><th>Sets × Reps</th><th>Load</th><th>RPE</th><th>Notes</th></tr>
+      <tr><td class="xn">OHP (strict)</td><td>5 × 5</td><td class="xl">74% = 144 lb</td><td class="xnote">RPE 7.5</td><td class="xnote">Drive this lift up through October</td></tr>
+      <tr><td class="xn">Weighted Pull-Up</td><td>5 × 5</td><td class="xl">Heavy</td><td class="xnote">RPE 8</td><td class="xnote">Back thickness for bench arch</td></tr>
+      <tr><td class="xn">Cable Row</td><td>4 × 10</td><td class="xl">Moderate-Heavy</td><td class="xnote">RPE 7.5</td><td class="xnote">Horizontal pull</td></tr>
+      <tr><td class="xn">DB Lateral Raise</td><td>4 × 15</td><td class="xl">Light</td><td class="xnote">RPE 7</td><td class="xnote">Shoulder capping</td></tr>
+      <tr><td class="xn">EZ Bar Curl</td><td>4 × 12</td><td class="xl">Moderate</td><td class="xnote">RPE 8</td><td class="xnote">Bicep</td></tr>
+      <tr><td class="xn">Overhead Tricep Extension</td><td>4 × 12</td><td class="xl">Moderate</td><td class="xnote">RPE 8</td><td class="xnote">Long head tricep</td></tr>
+      <tr><td class="xn">Face Pull</td><td>4 × 20</td><td class="xl">Band</td><td class="xnote">—</td><td class="xnote">Always</td></tr>
+    </table>
+  </div>
+</div>
+<div class="dc">
+  <div class="dch"><div class="dcn">Session E — Lower Accessory</div><div class="badge b-lift">Hypertrophy Lower</div></div>
+  <div class="dcb">
+    <table class="xt">
+      <tr><th>Exercise</th><th>Sets × Reps</th><th>Load</th><th>RPE</th><th>Notes</th></tr>
+      <tr><td class="xn">Front Squat</td><td>4 × 4</td><td class="xl">80% = 272 lb</td><td class="xnote">RPE 8</td><td class="xnote">Jerk + squat strength</td></tr>
+      <tr><td class="xn">RDL</td><td>4 × 8</td><td class="xl">68% = 296 lb</td><td class="xnote">RPE 7.5</td><td class="xnote">Hamstring volume</td></tr>
+      <tr><td class="xn">Leg Press</td><td>4 × 12</td><td class="xl">Moderate</td><td class="xnote">RPE 7.5</td><td class="xnote">Quad hypertrophy</td></tr>
+      <tr><td class="xn">Walking Lunge (DB)</td><td>3 × 10 ea</td><td class="xl">Moderate</td><td class="xnote">RPE 7</td><td class="xnote">Single-leg stability</td></tr>
+      <tr><td class="xn">Calf Raise</td><td>4 × 20</td><td class="xl">Moderate</td><td class="xnote">RPE 7</td><td class="xnote">Slow eccentric</td></tr>
+      <tr><td class="xn">Suitcase Carry 30m</td><td>4 rounds</td><td class="xl">Heavy</td><td class="xnote">—</td><td class="xnote">Every block, always</td></tr>
+    </table>
+  </div>
+</div>
+</div>
+</div>
+
+<div id="p5-w2" class="wd">
+<div class="wk-banner">
+  <div class="wk-title">Week 2 (Oct Wk2) — Load Push <span class="change-tag">↑ CHANGE</span></div>
+  <div class="wk-loads">Snatch ~90% feel → 3×2 @ 84% (181) · C&amp;J ~90% feel → 3×2 @ 84% (240) · Squat 5×3 @ 87% (361) · Bench ~92% feel → 4×3 @ 85% (272) · Conv DL 4×3 @ 83% (361)</div>
+</div>
+<div class="prog-box">
+  <h5>What Changes Week 2 vs Week 1</h5>
+  <table class="prog-table">
+    <tr><th>Exercise</th><th>Week 1</th><th>Week 2</th><th>Δ</th></tr>
+    <tr><td>Snatch heavy single</td><td class="pw">~88% feel ≈ 189 lb / RPE 8.5</td><td class="pv">~90% feel ≈ 194 lb / RPE 9</td><td class="xnote">+2% feel / +5 lb</td></tr>
+    <tr><td>Snatch back-offs (3×2)</td><td class="pw">82% = 176 lb</td><td class="pv">84% = 181 lb</td><td class="xnote">+2% / +5 lb</td></tr>
+    <tr><td>C&amp;J heavy single</td><td class="pw">~88% feel ≈ 251 lb / RPE 8.5</td><td class="pv">~90% feel ≈ 257 lb / RPE 9</td><td class="xnote">+2% feel / +6 lb</td></tr>
+    <tr><td>C&amp;J back-offs (3×2)</td><td class="pw">82% = 234 lb</td><td class="pv">84% = 240 lb</td><td class="xnote">+2% / +6 lb</td></tr>
+    <tr><td>Back Squat (5×3)</td><td class="pw">85% = 353 lb</td><td class="pv">87% = 361 lb</td><td class="xnote">+2% / +8 lb</td></tr>
+    <tr><td>Front Squat (Session A, 3×3)</td><td class="pw">78% = 265 lb</td><td class="pv">80% = 272 lb</td><td class="xnote">+2% / +7 lb</td></tr>
+    <tr><td>Front Squat (Session E, 4×4)</td><td class="pw">80% = 272 lb</td><td class="pv">82% = 279 lb</td><td class="xnote">+2% / +7 lb</td></tr>
+    <tr><td>Conv. DL</td><td class="pw">4×4 @ 80% (348 lb)</td><td class="pv">4×3 @ 83% (361 lb) — drop 1 rep</td><td class="xnote">+3%, −1 rep</td></tr>
+    <tr><td>Bench heavy single</td><td class="pw">~90% feel ≈ 288 lb / RPE 9</td><td class="pv">~92% feel ≈ 294 lb / RPE 9</td><td class="xnote">+2% feel / +6 lb</td></tr>
+    <tr><td>Bench back-offs (4×3)</td><td class="pw">84% = 269 lb</td><td class="pv">85% = 272 lb</td><td class="xnote">+1% / +3 lb</td></tr>
+    <tr><td>Floor Press (4×4)</td><td class="pw">78% = 250 lb</td><td class="pv">80% = 256 lb</td><td class="xnote">+2% / +6 lb</td></tr>
+    <tr><td>OHP (5×5)</td><td class="pw">74% = 144 lb</td><td class="pv">76% = 148 lb</td><td class="xnote">+2% / +4 lb</td></tr>
+    <tr><td>RDL (Session E, 4×8)</td><td class="pw">68% = 296 lb</td><td class="pv">70% = 305 lb</td><td class="xnote">+2% / +9 lb</td></tr>
+  </table>
+</div>
+</div>
+
+<div id="p5-w3" class="wd">
+<div class="wk-banner">
+  <div class="wk-title">Week 3 (Oct Wk3) — Near Max Territory <span class="change-tag">↑ CHANGE</span></div>
+  <div class="wk-loads">Snatch ~91% feel → 3×2 @ 85% (183) · C&amp;J ~91% feel → 3×2 @ 85% (242) · Squat 5×3 @ 88% (365) · Bench ~93% feel → 4×3 @ 86% (275) · Conv DL 4×3 @ 85% (370)</div>
+</div>
+<div class="prog-box">
+  <h5>What Changes Week 3 vs Week 2</h5>
+  <table class="prog-table">
+    <tr><th>Exercise</th><th>Week 2</th><th>Week 3</th><th>Δ</th></tr>
+    <tr><td>Snatch heavy single</td><td class="pw">~90% feel ≈ 194 lb / RPE 9</td><td class="pv">~91% feel ≈ 196 lb / RPE 9</td><td class="xnote">+1% feel / +2 lb</td></tr>
+    <tr><td>Snatch back-offs (3×2)</td><td class="pw">84% = 181 lb</td><td class="pv">85% = 183 lb</td><td class="xnote">+1% / +2 lb</td></tr>
+    <tr><td>C&amp;J heavy single</td><td class="pw">~90% feel ≈ 257 lb / RPE 9</td><td class="pv">~91% feel ≈ 260 lb / RPE 9</td><td class="xnote">+1% feel / +3 lb</td></tr>
+    <tr><td>C&amp;J back-offs (3×2)</td><td class="pw">84% = 240 lb</td><td class="pv">85% = 242 lb</td><td class="xnote">+1% / +2 lb</td></tr>
+    <tr><td>Back Squat (5×3)</td><td class="pw">87% = 361 lb</td><td class="pv">88% = 365 lb</td><td class="xnote">+1% / +4 lb</td></tr>
+    <tr><td>Conv. DL</td><td class="pw">4×3 @ 83% (361 lb)</td><td class="pv">4×3 @ 85% (370 lb)</td><td class="xnote">+2% / +9 lb</td></tr>
+    <tr><td>Bench heavy single</td><td class="pw">~92% feel ≈ 294 lb / RPE 9</td><td class="pv">~93% feel ≈ 298 lb / RPE 9+</td><td class="xnote">+1% feel / +4 lb</td></tr>
+    <tr><td>Bench back-offs (4×3)</td><td class="pw">85% = 272 lb</td><td class="pv">86% = 275 lb</td><td class="xnote">+1% / +3 lb</td></tr>
+    <tr><td>Spoto Press (3×5)</td><td class="pw">74% = 237 lb</td><td class="pv">76% = 243 lb</td><td class="xnote">+2% / +6 lb</td></tr>
+    <tr><td>Close-Grip Bench (3×6)</td><td class="pw">74% = 237 lb</td><td class="pv">76% = 243 lb</td><td class="xnote">+2% / +6 lb</td></tr>
+    <tr><td>Front Squat — Session A (3×3)</td><td class="pw">80% = 272 lb</td><td class="pv">82% = 279 lb</td><td class="xnote">+2% / +7 lb</td></tr>
+    <tr><td>OHP (5×5)</td><td class="pw">76% = 148 lb</td><td class="pv">78% = 152 lb</td><td class="xnote">+2% / +4 lb</td></tr>
+  </table>
+</div>
+</div>
+
+<div id="p5-w4" class="wd">
+<div class="wk-banner">
+  <div class="wk-title">Week 4 (Oct Wk4) — Pre-Max Peak <span class="change-tag">↑ CHANGE</span></div>
+  <div class="wk-note">Taper begins — sets drop on some lifts while % holds or bumps slightly</div>
+  <div class="wk-loads">Snatch ~92% feel → 3×2 @ 86% (185) · C&amp;J ~92% feel → 3×2 @ 86% (245) · Squat 5×2 @ 88% (365) · Bench ~94% feel → 3×3 @ 87% (278) · Conv DL 3×2 @ 87% (379)</div>
+</div>
+<div class="prog-box">
+  <h5>What Changes Week 4 vs Week 3</h5>
+  <table class="prog-table">
+    <tr><th>Exercise</th><th>Week 3</th><th>Week 4</th><th>Δ</th></tr>
+    <tr><td>Snatch heavy single</td><td class="pw">~91% feel ≈ 196 lb / RPE 9</td><td class="pv">~92% feel ≈ 198 lb / RPE 9</td><td class="xnote">+1% feel / +2 lb</td></tr>
+    <tr><td>Snatch back-offs (3×2)</td><td class="pw">85% = 183 lb</td><td class="pv">86% = 185 lb</td><td class="xnote">+1% / +2 lb</td></tr>
+    <tr><td>C&amp;J heavy single</td><td class="pw">~91% feel ≈ 260 lb / RPE 9</td><td class="pv">~92% feel ≈ 263 lb / RPE 9</td><td class="xnote">+1% feel / +3 lb</td></tr>
+    <tr><td>C&amp;J back-offs (3×2)</td><td class="pw">85% = 242 lb</td><td class="pv">86% = 245 lb</td><td class="xnote">+1% / +3 lb</td></tr>
+    <tr><td>Back Squat</td><td class="pw">5×3 @ 88% (365 lb)</td><td class="pv">5×2 @ 88% (365 lb) — same %, drop to 2 reps</td><td class="xnote">Taper</td></tr>
+    <tr><td>Conv. DL</td><td class="pw">4×3 @ 85% (370 lb)</td><td class="pv">3×2 @ 87% (379 lb) — drop volume, up %</td><td class="xnote">+2%, taper</td></tr>
+    <tr><td>Bench heavy single</td><td class="pw">~93% feel ≈ 298 lb / RPE 9+</td><td class="pv">~94% feel ≈ 301 lb / RPE 9+</td><td class="xnote">+1% feel / +3 lb</td></tr>
+    <tr><td>Bench back-offs</td><td class="pw">4×3 @ 86% (275 lb)</td><td class="pv">3×3 @ 87% (278 lb) — drop 1 set, up %</td><td class="xnote">Taper</td></tr>
+  </table>
+</div>
+<div class="al al-gold"><h4>Ready for November Max-Out</h4><ul>
+  <li>After Week 4: take 5–7 days at 75–80% only before max attempts</li>
+  <li>Targets: Snatch 215+ lb · C&amp;J 285+ lb · Squat 415+ lb · Bench 335–345 lb · Deadlift assess SIJ first</li>
+  <li>All accessory work from Weeks 1–3 carries through Week 4. McGill Big 3 before every session without exception.</li>
+</ul></div>
+</div>
+</div>
+
+</div><!-- end workouts section -->
+
+<!-- LOADS -->
+<div id="loads" class="sec">
+  <div class="sh"><h2>Load Tables — All Lifts</h2><span class="sh-tag">All Weights in lbs · RPE Overrides % Always</span></div>
+  <p style="font-size:0.84rem;color:var(--td);margin-bottom:16px;">Post-shift under 4 hrs sleep, post-5-rounds golf, or SIJ tenderness = RPE 7 cap regardless of what the table says.</p>
+  <div style="overflow-x:auto;">
+  <table class="dt">
+    <tr><th>Lift</th><th>1RM</th><th>58%</th><th>62%</th><th>65%</th><th>68%</th><th>70%</th><th>72%</th><th>74%</th><th>76%</th><th>78%</th><th>80%</th><th>82%</th><th>84%</th><th>85%</th><th>86%</th><th>88%</th><th>90%</th><th>93%</th><th>95%</th></tr>
+    <tr><td class="dt-n">Back Squat</td><td class="dt-v">415</td><td>241</td><td>257</td><td>270</td><td>282</td><td>291</td><td>299</td><td>307</td><td>315</td><td>324</td><td>332</td><td>340</td><td>349</td><td>353</td><td>357</td><td>365</td><td>374</td><td>386</td><td>394</td></tr>
+    <tr><td class="dt-n">Bench Press</td><td class="dt-v">320</td><td>186</td><td>198</td><td>208</td><td>218</td><td>224</td><td>230</td><td>237</td><td>243</td><td>250</td><td>256</td><td>262</td><td>269</td><td>272</td><td>275</td><td>282</td><td>288</td><td>298</td><td>304</td></tr>
+    <tr><td class="dt-n">Conv. Deadlift</td><td class="dt-v">435</td><td>252</td><td>270</td><td>283</td><td>296</td><td>305</td><td>313</td><td>322</td><td>330</td><td>339</td><td>348</td><td>357</td><td>365</td><td>370</td><td>374</td><td>383</td><td>392</td><td>405</td><td>413</td></tr>
+    <tr><td class="dt-n">Trap Bar DL*</td><td class="dt-v">~455</td><td>264</td><td>282</td><td>296</td><td>309</td><td>319</td><td>328</td><td>337</td><td>346</td><td>355</td><td>364</td><td>373</td><td>382</td><td>387</td><td>391</td><td>400</td><td>410</td><td>423</td><td>432</td></tr>
+    <tr><td class="dt-n">Snatch</td><td class="dt-v">215</td><td>125</td><td>133</td><td>140</td><td>146</td><td>151</td><td>155</td><td>159</td><td>163</td><td>168</td><td>172</td><td>176</td><td>181</td><td>183</td><td>185</td><td>189</td><td>194</td><td>200</td><td>204</td></tr>
+    <tr><td class="dt-n">Clean &amp; Jerk</td><td class="dt-v">285</td><td>165</td><td>177</td><td>185</td><td>194</td><td>200</td><td>205</td><td>211</td><td>217</td><td>222</td><td>228</td><td>234</td><td>240</td><td>242</td><td>245</td><td>251</td><td>257</td><td>265</td><td>271</td></tr>
+    <tr><td class="dt-n">Front Squat†</td><td class="dt-v">~340</td><td>197</td><td>211</td><td>221</td><td>231</td><td>238</td><td>245</td><td>252</td><td>258</td><td>265</td><td>272</td><td>279</td><td>286</td><td>289</td><td>292</td><td>299</td><td>306</td><td>316</td><td>323</td></tr>
+    <tr><td class="dt-n">OHP (est.)</td><td class="dt-v">~195</td><td>113</td><td>121</td><td>127</td><td>133</td><td>137</td><td>140</td><td>144</td><td>148</td><td>152</td><td>156</td><td>160</td><td>164</td><td>166</td><td>168</td><td>172</td><td>176</td><td>181</td><td>185</td></tr>
+  </table>
+  </div>
+  <p style="font-size:0.72rem;color:var(--tf);margin-top:-18px;margin-bottom:24px;">*Trap bar typically 4–8% more than conventional. Test conservatively. †Front squat ~82% of back squat. Verify May Week 2.</p>
+
+  <div class="sh" style="margin-top:28px;"><h2>Full 26-Week Progression at a Glance</h2><span class="sh-tag">Every Week Summarised</span></div>
+  <div style="overflow-x:auto;">
+  <table class="dt">
+    <tr><th>Block</th><th>Weeks</th><th>Snatch</th><th>C&amp;J</th><th>Back Squat</th><th>Bench</th><th>DL</th></tr>
+    <tr><td class="dt-n">1 Deload</td><td>Wk1</td><td class="dt-v">5×3 @ 58% (125)</td><td class="dt-v">5×2+1 @ 60% (171)</td><td>4×6 @ 55% (228)</td><td>4×8 @ 62% (198)</td><td>TBD 3×8 @ 50% (228)</td></tr>
+    <tr><td class="dt-n">1 Deload</td><td>Wk2</td><td class="dt-v">5×3 @ 62% (133)</td><td class="dt-v">5×2+1 @ 64% (183)</td><td>4×6 @ 60% (249)</td><td>4×8 @ 65% (208)</td><td>TBD 3×8 @ 54% (246)</td></tr>
+    <tr><td class="dt-n">2 Build</td><td>Wk1–2</td><td class="dt-v">~83% feel → 3×2 @ 74% (159)</td><td class="dt-v">~83% feel → 3×2 @ 74% (211)</td><td>5×5 @ 70% (291)</td><td>~83% feel → 4×3 @ 76% (243)</td><td>TBD 4×5 @ 68% (309)</td></tr>
+    <tr><td class="dt-n">2 Build</td><td>Wk3–4</td><td class="dt-v">~85% feel → 3×2 @ 76% (163)</td><td class="dt-v">~85% feel → 3×2 @ 76% (217)</td><td>5×5 @ 73% (303)</td><td>~85% feel → 4×3 @ 78% (250)</td><td>TBD 4×5 @ 70% (319)</td></tr>
+    <tr><td class="dt-n">2 Build</td><td>Wk5–6</td><td class="dt-v">~87% feel → 3×2 @ 78% (168)</td><td class="dt-v">~87% feel → 3×2 @ 78% (222)</td><td>5×4 @ 76% (315)</td><td>~87% feel → 4×3 @ 80% (256)</td><td>TBD 4×4 @ 72% (328)</td></tr>
+    <tr><td class="dt-n">3 Peak Golf</td><td>Wk1–3</td><td class="dt-v">~85% feel → 2×2 @ 78% (168)</td><td class="dt-v">~85% feel → 2×2 @ 78% (222)</td><td>4×3 @ 80% (332)</td><td>~86% feel → 4×3 @ 80% (256)</td><td>TBD 3×4 @ 74% (337)</td></tr>
+    <tr><td class="dt-n">3 Peak Golf</td><td>Wk4–6</td><td class="dt-v">~87% feel → 2×2 @ 80% (172)</td><td class="dt-v">~87% feel → 2×2 @ 80% (228)</td><td>4×3 @ 82% (340)</td><td>~88% feel → 4×3 @ 82% (262)</td><td>TBD 3×4 @ 76% (346)</td></tr>
+    <tr><td class="dt-n">3 Peak Golf</td><td>Wk7–9</td><td class="dt-v">~88% feel → 2×2 @ 82% (176)</td><td class="dt-v">~88% feel → 2×2 @ 82% (234)</td><td>4×3 @ 84% (349)</td><td>~90% feel → 4×3 @ 84% (269)</td><td>TBD 3×4 @ 78% (355)</td></tr>
+    <tr><td class="dt-n">4 Wind-Down</td><td>Sept Wk1</td><td class="dt-v">~88% feel → 3×2 @ 82% (176)</td><td class="dt-v">~88% feel → 3×2 @ 82% (234)</td><td>5×3 @ 85% (353)</td><td>~90% feel → 4×3 @ 83% (266)</td><td>TBD 4×4 @ 78% (355)</td></tr>
+    <tr><td class="dt-n">4 Wind-Down</td><td>Sept Wk2</td><td class="dt-v">~89% feel → 3×2 @ 83% (178)</td><td class="dt-v">~89% feel → 3×2 @ 83% (237)</td><td>5×3 @ 86% (357)</td><td>~91% feel → 4×3 @ 84% (269)</td><td>TBD 4×4 @ 80% (364)</td></tr>
+    <tr><td class="dt-n">4 Wind-Down</td><td>Sept Wk3</td><td class="dt-v">~90% feel → 3×2 @ 84% (181)</td><td class="dt-v">~90% feel → 3×2 @ 84% (240)</td><td>5×3 @ 87% (361)</td><td>~92% feel → 4×3 @ 85% (272)</td><td>TBD 4×3 @ 82% (373)</td></tr>
+    <tr><td class="dt-n">4 Wind-Down</td><td>Sept Wk4</td><td class="dt-v">~91% feel → 3×2 @ 85% (183)</td><td class="dt-v">~91% feel → 3×2 @ 85% (242)</td><td>5×3 @ 88% (365)</td><td>~93% feel → 4×3 @ 86% (275)</td><td>CONV 4×4 @ 80% (348)</td></tr>
+    <tr><td class="dt-n">5 Rebuild</td><td>Oct Wk1</td><td class="dt-v">~88% feel → 3×2 @ 82% (176)</td><td class="dt-v">~88% feel → 3×2 @ 82% (234)</td><td>5×3 @ 85% (353)</td><td>~90% feel → 4×3 @ 84% (269)</td><td>CONV 4×4 @ 80% (348)</td></tr>
+    <tr><td class="dt-n">5 Rebuild</td><td>Oct Wk2</td><td class="dt-v">~90% feel → 3×2 @ 84% (181)</td><td class="dt-v">~90% feel → 3×2 @ 84% (240)</td><td>5×3 @ 87% (361)</td><td>~92% feel → 4×3 @ 85% (272)</td><td>CONV 4×3 @ 83% (361)</td></tr>
+    <tr><td class="dt-n">5 Rebuild</td><td>Oct Wk3</td><td class="dt-v">~91% feel → 3×2 @ 85% (183)</td><td class="dt-v">~91% feel → 3×2 @ 85% (242)</td><td>5×3 @ 88% (365)</td><td>~93% feel → 4×3 @ 86% (275)</td><td>CONV 4×3 @ 85% (370)</td></tr>
+    <tr><td class="dt-n">5 Rebuild</td><td>Oct Wk4</td><td class="dt-v">~92% feel → 3×2 @ 86% (185)</td><td class="dt-v">~92% feel → 3×2 @ 86% (245)</td><td>5×2 @ 88% (365)</td><td>~94% feel → 3×3 @ 87% (278)</td><td>CONV 3×2 @ 87% (379)</td></tr>
+  </table>
+  </div>
+</div>
+
+<!-- BACK PROTOCOL -->
+<div id="spine" class="sec">
+  <div class="sh"><h2>Back & SIJ Protocol</h2><span class="sh-tag">Daily · Pre-Golf · Post-Golf · On Shift</span></div>
+  <div class="al al-red" style="margin-bottom:20px;">
+    <h4>Your Situation — Specific and Honest</h4>
+    <ul>
+      <li>You're 26. You lift heavy all winter pain-free. Your back hurts from golf, not from lifting. This means your program doesn't need to be stripped down — it needs smarter total load management around golf volume.</li>
+      <li>5 rounds/wk × ~80 swings = 400 high-load lumbar rotations per week. Last August you added heavy gym volume on top of that. That crossed the threshold.</li>
+      <li>Physio 1–2×/wk is a significant asset. Tell them what you lifted and what you felt. Share this program. They're your real-time feedback loop.</li>
+      <li>Root cause: hip rotation availability + glute strength. When hips don't rotate enough, the SI joint compensates. The pre-golf warmup is mechanical prep — not optional.</li>
+    </ul>
+  </div>
+  <div class="grid2">
+    <div class="card"><div class="card-tag t-fire">● Every Session — 6 min</div><h3>McGill Big 3</h3>
+    <p><span class="t-wh">Modified Curl-Up:</span> 2×10. Hands under lumbar, one knee bent. Minimal flexion. Not a crunch.<br><br>
+    <span class="t-wh">Bird Dog:</span> 3×8 each side. Brace before moving. 2-sec hold. Wobble = slow down.<br><br>
+    <span class="t-wh">Side Plank:</span> 3×30s each side. Drive hip to ceiling. Progress to 3-point when easy.</p></div>
+    <div class="card"><div class="card-tag t-gold">● Before Every Round — 10 min</div><h3>Pre-Golf Warmup</h3>
+    <p><span class="t-wh">90/90 Hip Stretch:</span> 2 min each side. Passive — let gravity open the hip.<br><br>
+    <span class="t-wh">Hip CARs:</span> 3 slow circles each hip. Full range, zero momentum.<br><br>
+    <span class="t-wh">Glute Bridge × 20:</span> Fire SIJ stabilizers before 80 swings.<br><br>
+    <span class="t-wh">Half-Kneeling T-Spine Rotation:</span> 10 each side. If it moves in your low back, focus higher.</p></div>
+    <div class="card"><div class="card-tag t-grn">● After Every Round — 10 min</div><h3>Post-Round Decompression</h3>
+    <p><span class="t-wh">Cat-Cow × 15:</span> Slow and deliberate. Decompress lumbar discs.<br><br>
+    <span class="t-wh">Child's Pose:</span> 60s. Passive lumbar unloading.<br><br>
+    <span class="t-wh">Piriformis Stretch:</span> 60s each side. Attaches at SI joint — tight piriformis prevents proper SIJ closure.<br><br>
+    <span class="t-wh">Standing McKenzie Extension × 10:</span> Hands on low back, extend backward. Counteracts flexion pattern of swing.</p></div>
+    <div class="card"><div class="card-tag t-blu">● On Shift — 5 min</div><h3>Station / Hall Routine</h3>
+    <p>Bay floor is fine. Between calls.<br><br>
+    <span class="t-wh">McGill Big 3:</span> 1 full round.<br><br>
+    <span class="t-wh">Hip Flexor Lunge Stretch:</span> 60s each side. SCBA pack forces anterior pelvic tilt — undo it.<br><br>
+    <span class="t-wh">Wall Angel × 10:</span> Back flat, arms slide overhead. Counteracts thoracic kyphosis from pack posture.</p></div>
+  </div>
+  <div class="al al-fire" style="margin-top:8px;">
+    <h4>Gym Exercise Rules — Golf Season (May–September)</h4>
+    <ul>
+      <li>TRAP BAR DEADLIFT replaces conventional from May through September. Only mandatory restriction — everything else stays in.</li>
+      <li>FULL SQUAT OLY LIFTS stay in all blocks. The issue is cumulative volume with golf, not the lift itself.</li>
+      <li>IF SIJ IS ACTIVELY IRRITATED that week: hang positions only for that week. Short-term, not permanent.</li>
+      <li>ANTI-ROTATION core daily: Pallof press, dead bug, Copenhagen plank, suitcase carry. 400 rotations/wk from golf — train the stabilizer, not more rotation.</li>
+      <li>GLUTE WORK every session: clamshells, bridges. Weak glutes force the SIJ to stabilize what glutes should. Root of summer flares.</li>
+      <li>COMMUNICATE with your physio. Share this document with them. They are your best real-time monitor.</li>
+    </ul>
+  </div>
+  <div class="al al-red">
+    <h4>Red Flags — Stop and Assess</h4>
+    <ul>
+      <li>Pain radiating into glute, posterior thigh, or below knee = stop all lifting. Not SIJ — disc or nerve. Physio same week.</li>
+      <li>Pain worse in morning for 30+ min before loosening = inflammatory component. Different management needed. See MD.</li>
+      <li>Asymmetry in bird dog warmup = mobility only day.</li>
+      <li>Pain above 4/10 for 3+ days = physio appointment, don't wait.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- CARDIO -->
+<div id="cardio" class="sec">
+  <div class="sh"><h2>Cardio & Sprints</h2><span class="sh-tag">Zone 2 · Sprints · Plyo</span></div>
+  <div class="al al-grn" style="margin-bottom:18px;">
+    <h4>Cardio Philosophy</h4>
+    <ul>
+      <li>Zone 2: 130–145 bpm, conversational. Can't speak in full sentences = too fast. Slow down.</li>
+      <li>Running preferred when SIJ healthy — best fat loss tool, highest VO2 stimulus. Switch to bike when SIJ tender. Zero impact beats gritting through it.</li>
+      <li>Golf walking 5×/wk in July–August = 25–30 km/wk of Zone 2 already. On those weeks: 2 short runs/bikes max on top.</li>
+      <li>Sprints and plyo: Block 4 onward. Every 10–14 days. Before a lift session only. SIJ symptom-free only.</li>
+    </ul>
+  </div>
+  <div class="sh"><h2>Zone 2 Volume by Block</h2><span class="sh-tag">Weekly Totals</span></div>
+  <table class="dt" style="margin-bottom:24px;">
+    <tr><th>Block</th><th>Standalone/Wk</th><th>Duration</th><th>Golf Walking</th><th>Station Cardio</th><th>Total Approx</th></tr>
+    <tr><td class="dt-n">1 Deload</td><td class="dt-v">3×</td><td>22–25 min</td><td>Starting (~3 rounds)</td><td>20 min/shift</td><td>~2.5–3.5 hrs</td></tr>
+    <tr><td class="dt-n">2 Build</td><td class="dt-v">2×</td><td>28–35 min</td><td>3–4 rounds (~2–2.5 hrs)</td><td>20 min/shift</td><td>~3.5–4.5 hrs</td></tr>
+    <tr><td class="dt-n">3 Peak Golf</td><td class="dt-v">2×</td><td>20–25 min</td><td>5 rounds (~3 hrs)</td><td>20 min/shift</td><td>~4.5–5.5 hrs</td></tr>
+    <tr><td class="dt-n">4 Wind-Down</td><td class="dt-v">2×</td><td>30–35 min</td><td>4 rounds (~2.5 hrs)</td><td>20 min/shift</td><td>~4–5 hrs</td></tr>
+    <tr><td class="dt-n">5 Rebuild</td><td class="dt-v">2×</td><td>28–32 min</td><td>1–2 rounds</td><td>20 min/shift</td><td>~2–3 hrs</td></tr>
+  </table>
+  <div class="sh"><h2>Sprint & Plyo Sessions</h2><span class="sh-tag">Blocks 4–5 · Every 10–14 Days · SIJ Clear Only · Before Lift Only</span></div>
+  <div class="daygrid">
+    <div class="dc">
+      <div class="dch"><div class="dcn">Sprint Session A — Flat</div><div class="badge b-sprint">Speed · Quality Not Volume</div></div>
+      <div class="dcb">
+        <table class="xt">
+          <tr><th>Activity</th><th>Sets</th><th>Rest</th><th>Effort</th></tr>
+          <tr><td class="xn">Dynamic warmup (A-skips, leg swings, hip circles)</td><td>5 min</td><td class="xl">—</td><td class="xnote">Never skip</td></tr>
+          <tr><td class="xn">40m sprint</td><td>3 × 1</td><td class="xl">3 min full</td><td class="xnote">80% effort — build in</td></tr>
+          <tr><td class="xn">40m sprint</td><td>3 × 1</td><td class="xl">3 min full</td><td class="xnote">90–95% effort</td></tr>
+          <tr><td class="xn">Easy jog cooldown</td><td>5 min</td><td class="xl">—</td><td class="xnote">—</td></tr>
+        </table>
+        <div class="dnote">Always before a lift. Full 3 min rest between every sprint. This is NOT a conditioning circuit.</div>
+      </div>
+    </div>
+    <div class="dc">
+      <div class="dch"><div class="dcn">Sprint Session B — Hills</div><div class="badge b-sprint">Lower Hamstring Risk</div></div>
+      <div class="dcb">
+        <table class="xt">
+          <tr><th>Activity</th><th>Sets</th><th>Rest</th><th>Effort</th></tr>
+          <tr><td class="xn">Hill sprint (6–8% grade, 30m)</td><td>3 × 1</td><td class="xl">3 min</td><td class="xnote">90%</td></tr>
+          <tr><td class="xn">Hill sprint (same)</td><td>3 × 1</td><td class="xl">3 min</td><td class="xnote">95%, walk back down</td></tr>
+        </table>
+        <div class="dnote">Less hamstring strain. Good when lower body is loaded from squatting. Assault bike 10-sec all-outs × 8 (3 min rest) = indoor equivalent.</div>
+      </div>
+    </div>
+    <div class="dc">
+      <div class="dch"><div class="dcn">Plyo Session</div><div class="badge b-sprint">Power + Athleticism</div></div>
+      <div class="dcb">
+        <table class="xt">
+          <tr><th>Exercise</th><th>Sets × Reps</th><th>Rest</th><th>Notes</th></tr>
+          <tr><td class="xn">Box Jump (24")</td><td>4 × 5</td><td class="xl">90s full</td><td class="xnote">Land soft, reset stance between reps</td></tr>
+          <tr><td class="xn">Broad Jump</td><td>3 × 4</td><td class="xl">Full</td><td class="xnote">Max effort each rep</td></tr>
+          <tr><td class="xn">Single-Leg Hop (forward)</td><td>3 × 5 ea</td><td class="xl">60s</td><td class="xnote">Stick landing</td></tr>
+          <tr><td class="xn">Med Ball Rotational Throw (wall)</td><td>3 × 8 ea</td><td class="xl">45s</td><td class="xnote">Golf-specific rotational power. Hip-driven.</td></tr>
+          <tr><td class="xn">Med Ball Slam</td><td>3 × 8</td><td class="xl">45s</td><td class="xnote">Full body power expression</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="dc">
+      <div class="dch"><div class="dcn">All Cardio Tools</div><div class="badge b-cardio">Options by Situation</div></div>
+      <div class="dcb">
+        <table class="xt">
+          <tr><th>Tool</th><th>Best For</th><th>SIJ</th></tr>
+          <tr><td class="xn">Outdoor run</td><td class="xnote">Recomp + VO2 — primary tool</td><td class="xnote">Perfect when SIJ healthy</td></tr>
+          <tr><td class="xn">Outdoor bike</td><td class="xnote">SIJ-safe Zone 2</td><td class="xnote">Zero impact — anytime</td></tr>
+          <tr><td class="xn">Rowing erg</td><td class="xnote">Full body Zone 2</td><td class="xnote">No spinal impact</td></tr>
+          <tr><td class="xn">Assault bike</td><td class="xnote">Zone 2 + sprints</td><td class="xnote">Best indoor sprint tool</td></tr>
+          <tr><td class="xn">Ski erg</td><td class="xnote">Posterior chain Zone 2</td><td class="xnote">No impact</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NUTRITION -->
+<div id="nutrition" class="sec">
+  <div class="sh"><h2>Nutrition & Recomp</h2><span class="sh-tag">16% → 13% · Alcohol Included · Honest Plan</span></div>
+  <div class="al al-gold" style="margin-bottom:16px;">
+    <h4>The Honest Alcohol Assessment</h4>
+    <ul>
+      <li>2–6 drinks, 1–2 nights/wk. Lower end slows recomp minimally. Upper end (6 drinks × 2 nights) adds 2–3 weeks and worsens SIJ recovery for 24–48 hrs after each session.</li>
+      <li>On drinking nights: drop dietary fat to 20–25g. Keep carbs and protein normal. Alcohol + high fat is what gets stored efficiently.</li>
+      <li>4+ drinks acutely raises inflammatory markers for 24–48 hrs. Avoid heavy nights before a 5-round golf week or heavy Oly session.</li>
+    </ul>
+  </div>
+  <div class="sh"><h2>Body Composition Timeline</h2><span class="sh-tag">Realistic Projections</span></div>
+  <div style="margin-bottom:24px;">
+    <div class="bcbar"><div class="bcl">Start — May 2025</div><div class="bct"><div class="bcf" style="width:80%;background:var(--red);"></div></div><div class="bcn">~16% BF · 207 lbs · ~33 lbs fat · ~174 lbs lean</div></div>
+    <div class="bcbar"><div class="bcl">Target — July 2025 (8–10 weeks)</div><div class="bct"><div class="bcf" style="width:63%;background:var(--gold);"></div></div><div class="bcn">~13% BF · ~201–202 lbs · -5–6 lbs fat · lean mass protected via 190g+ protein + creatine daily</div></div>
+    <div class="bcbar"><div class="bcl">Maintain — July through October</div><div class="bct"><div class="bcf" style="width:63%;background:var(--grn);"></div></div><div class="bcn">Eat at TDEE. Do not diet through peak golf season. SIJ heals better when fueled.</div></div>
+    <div class="bcbar"><div class="bcl">Winter Bulk — November → April 2026</div><div class="bct"><div class="bcf" style="width:70%;background:var(--blu);"></div></div><div class="bcn">+300–400 cal/day surplus. Target ~14–15% BF entering May 2026 with higher absolute strength.</div></div>
+  </div>
+  <div class="lg">
+    <div class="lc"><h3 style="color:var(--fire);">Daily Calories — Recomp</h3><ul>
+      <li>Heavy lift day: 2,800–2,950 cal</li><li>Golf + no lift: 2,700–2,850 cal</li><li>Shift day: 2,400–2,550 cal</li>
+      <li>Rest / light cardio: 2,300–2,400 cal</li><li>Drinking night: ~2,400, fat under 25g, protein 190g+</li>
+      <li>Floor: never below 2,200 cal</li><li>Avg deficit target: ~400 cal/day = ~0.7 lbs fat/wk</li></ul></div>
+    <div class="lc"><h3 style="color:var(--gold);">Protein Targets</h3><ul>
+      <li>On deficit: 190g/day minimum</li><li>Optimal: 200–215g/day</li>
+      <li>Post-golf: 40–50g within 60 min of finishing</li><li>Pre-bed: 30–40g slow protein — connective tissue repairs overnight</li>
+      <li>Shift days: prep snacks for the hall</li><li>Before drinking: full protein meal first</li></ul></div>
+    <div class="lc"><h3 style="color:var(--grn);">Supplement Stack</h3><ul>
+      <li>Creatine monohydrate: 5g/day always — protects lean mass on deficit</li>
+      <li>Omega-3 (EPA+DHA): 3g/day — anti-inflammatory, directly benefits SIJ</li>
+      <li>Vitamin D3 + K2: 3,000–4,000 IU D3 — shift workers chronically deficient</li>
+      <li>Collagen + Vit C: 10g collagen + 50mg C pre-training — ligament/tendon support</li>
+      <li>Magnesium glycinate: 300–400mg before bed — sleep depth on shift nights</li>
+      <li>Electrolytes on hot golf days</li></ul></div>
+    <div class="lc"><h3 style="color:var(--blu);">Sleep & Recovery</h3><ul>
+      <li>Post-shift: 7–9 hrs before any heavy Oly or squat session</li>
+      <li>Sleep deprivation raises cortisol → raises inflammation → worsens SIJ. Disrupted sleep after shifts is a bigger SIJ risk than any lift in this program.</li>
+      <li>Golf season: protect 8 hrs sleep over any training goal</li>
+      <li>SIJ flare-up: ice 15 min × 3/day. NOT heat in first 48 hrs.</li>
+      <li>Physio: tell them what you lifted and what you felt. That loop is your biggest recovery advantage.</li></ul></div>
+    <div class="lc"><h3 style="color:var(--fire);">Hydration</h3><ul>
+      <li>Heavy golf days Jul–Aug: 3.5–5L minimum</li><li>Lift days: 2.5–3L minimum</li>
+      <li>Shift days: 2.5–3L — dehydration under gear compounds injury risk</li>
+      <li>Dehydration worsens disc hydration and SI joint lubrication directly</li>
+      <li>Alcohol: add 500ml water per 2 drinks overnight</li>
+      <li>Electrolytes on rounds over 25°C — sodium first</li></ul></div>
+    <div class="lc"><h3 style="color:var(--purp);">Golf Season Maintenance</h3><ul>
+      <li>Deficit OFF once recomp complete. Eat at TDEE.</li>
+      <li>Golf walking 5×/wk burns ~1,400–1,800 cal/wk. Maintenance calories are high — eat to it.</li>
+      <li>Underfueling through peak golf = higher SIJ flare risk. Not worth it.</li>
+      <li>Heavy golf day maintenance: 3,000–3,200 cal</li>
+      <li>Protein stays at 190g+ even in maintenance</li></ul></div>
+  </div>
+</div>
+
+<script>
+function S(id,btn){
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('on'));
+  document.querySelectorAll('.nb').forEach(b=>b.classList.remove('on'));
+  document.getElementById(id).classList.add('on');
+  btn.classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function gP(pid){
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('on'));
+  document.querySelectorAll('.nb').forEach(b=>b.classList.toggle('on',b.textContent.trim()==='Workouts'));
+  document.getElementById('workouts').classList.add('on');
+  document.querySelectorAll('.pd').forEach(p=>p.classList.remove('on'));
+  document.querySelectorAll('.pb').forEach(b=>b.classList.remove('on'));
+  const t=document.getElementById(pid);
+  if(t)t.classList.add('on');
+  document.querySelectorAll('.pb').forEach(b=>{
+    if(b.getAttribute('onclick')&&b.getAttribute('onclick').includes("'"+pid+"'"))b.classList.add('on');
+  });
+}
+function sP(pid,btn){
+  document.querySelectorAll('.pd').forEach(p=>p.classList.remove('on'));
+  document.querySelectorAll('.pb').forEach(b=>b.classList.remove('on'));
+  const t=document.getElementById(pid);
+  if(t)t.classList.add('on');
+  btn.classList.add('on');
+  const fw=t&&t.querySelector('.wd');if(fw)fw.classList.add('on');
+  const ft=t&&t.querySelector('.wt');if(ft)ft.classList.add('on');
+}
+function sW(phid,wid,btn){
+  const ph=document.getElementById(phid);
+  if(!ph)return;
+  ph.querySelectorAll(':scope>.wd').forEach(w=>w.classList.remove('on'));
+  const t=document.getElementById(phid+'-'+wid);
+  if(t)t.classList.add('on');
+  const tabs=ph.querySelector('.wtabs');
+  if(tabs)tabs.querySelectorAll('.wt').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+}
+</script>
+</body>
+</html>
